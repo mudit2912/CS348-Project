@@ -1,10 +1,9 @@
 -- --------------------------------------------------------
-
 --
 -- CS348 Project
--- MySQL Database Setup
+-- Code to create and load database (MySQL)
+-- Note: This is for MySQL. SQL code can be found in the 'C2' directory.
 --
-
 -- --------------------------------------------------------
 
 --
@@ -191,7 +190,7 @@ INSERT INTO `Powerlifter_Meets` VALUES
 (3,7),
 (5,3),
 (5,4),
-(5,5)
+(5,5);
 UNLOCK TABLES;
 
 LOCK TABLES `Scores` WRITE;
@@ -219,7 +218,7 @@ INSERT INTO `Person_Meet_Info` VALUES
 (3,7,'Open','100',6),
 (5,3,'M3','110',4),
 (5,4,'M3','110',7),
-(5,5,'M3','110',1)
+(5,5,'M3','110',1);
 UNLOCK TABLES;
 
 LOCK TABLES `Lifts` WRITE;
