@@ -1,0 +1,43 @@
+--
+-- Feature #1
+--
+
+
+--
+-- Feature #2
+--
+
+
+--
+-- Feature #3
+--
+The query will return the following relation with only one attribute (powerlifter_id):
+
+------------------
+| powerlifter_id |
+------------------
+|       2        |
+------------------
+|       3        |
+------------------
+|       5        |
+------------------
+
+--
+-- Feature #4
+--
+No output. However, the Person and User tables will now contain the following new tuples, respectively:
+
+Person
+--------------------------------------------------------
+| id | first_name | last_name | gender | date_of_birth |
+--------------------------------------------------------
+| 6 |    Ed       |   Coan    |    M   |  1963-07-24   |
+--------------------------------------------------------
+
+User
+------------------------------------------------------------------------------
+| id | username | pfp_url |           bio            |         email         |
+------------------------------------------------------------------------------
+| 6 |  ed_coan  |  NULL   | 71x World Record Holder. | edcoan@powerlifty.com |
+------------------------------------------------------------------------------
