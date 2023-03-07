@@ -41,7 +41,7 @@ function LeaderboardView(props) {
             <h1 className="leaderboard title">National Leaderboard</h1>
             <div className="leaderboard indiv">
                 <h2 className="leaderboard in label">Max # of Results</h2>
-                <input className="leaderboard input" type="number" value={limit || null } onChange={(event)=>{setLimit(parseInt(event.target.value))}} />
+                <input className="leaderboard input" type="number" value={limit || "" } onChange={(event)=>{setLimit(parseInt(event.target.value))}} />
                 <h2 className="leaderboard in label">Country</h2>
                 <input className="leaderboard input" type="text" placeholder="USA" value={country || "" } onChange={(event)=>{setCountry(event.target.value)}} />
                 <button className="leaderboard button" onClick={getLeaders}>Load</button>
