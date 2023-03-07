@@ -21,7 +21,7 @@ Both the 'backend' and 'frontend' servers contain a 'Dockerfile', which installs
 
 #### docker-compose.yml
 There is a 'docker-compose.yml' file in the root directory.
-This docker-compose.yml file defines the services for our full-stack web application, including a MySQL database, a backend server, a frontend server, and a MySQL admin tool. The MySQL database is configured with an initialization script, and all services are connected to a common Docker network. The backend and frontend services are configured to use development settings, and the frontend server is set up to use polling for file changes. The MySQL admin tool is accessible on port 8080.
+This docker-compose.yml file defines the services for our full-stack web application, including a MySQL database, a backend server, a frontend server, and a MySQL admin tool. The MySQL database is configured with an initialization script, and all services are connected to a common Docker network. The MySQL admin tool is accessible on port 8080.
 
 ## Starting the Application
 1. Open terminal
