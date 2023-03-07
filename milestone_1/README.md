@@ -1,31 +1,29 @@
-# CS348 Project
+# CS348 Project (Milestone 1)
 
-## Milestone 1 (C1)
-
-#### Pre-Requisites
+## Pre-Requisites
 Must have docker installed.
 
-#### Overview
+## Overview
 The C5 folder contains the following:
 
-###### Backend Code
+#### Backend Code
 The 'backend' directory holds the code for a Node.js server that uses Express to respond to API requests.
 
-###### Database Code
+#### Database Code
 The 'backend' directory also contains the file 'db-setup.sql', which is used to populate the database.
 A MySQL server is created by Docker (instructions below), and the commands in 'db-setup.sql' are ran on the server after it is created.
 
-###### Frontend Code
+#### Frontend Code
 The 'frontend' directory holds the code for a Node.js server that uses React to serve frontend code.
 
-###### Dockerfile
+#### Dockerfile
 Both the 'backend' and 'frontend' servers contain a 'Dockerfile', which installs the necessary packages before starting the servers.
 
-###### docker-compose.yml
+#### docker-compose.yml
 There is a 'docker-compose.yml' file in the root directory.
 This docker-compose.yml file defines the services for our full-stack web application, including a MySQL database, a backend server, a frontend server, and a MySQL admin tool. The MySQL database is configured with an initialization script, and all services are connected to a common Docker network. The backend and frontend services are configured to use development settings, and the frontend server is set up to use polling for file changes. The MySQL admin tool is accessible on port 8080.
 
-#### Starting the Application
+## Starting the Application
 1. Open terminal
 2. cd into milestone_1
 3. Build the project with the following command:
@@ -47,7 +45,7 @@ docker compose prune
 ```
 ***Warning:*** This will delete all non-running containers from your machine.
 
-#### Demo
+## Demo
 Below is a list of features currently supported for Milestone 1, and how to see them in action.
 
 Feel free to open http://localhost:8080 (MySQL Admin service) to take a look at the live database. You can login with:
@@ -58,7 +56,7 @@ Password: !admin!cs348
 Database: powerlifting_db
 ```
 
-###### Authentication
+#### Authentication
 Open http://localhost:3000/login.
 
 As you can see in the User table, a correct login would be:
@@ -74,7 +72,7 @@ This functionality will be extended upon for later submissions.
 - We will implement session management to store & maintain authentication states
 - /login and /signup will redirect to a home page if user is already logged in, and vice versa if user is not logged in
 
-###### Create Account
+#### Create Account
 Open http://localhost:3000/signup, or click the 'Sign Up' button on the login page.
 
 Go through the basic steps to create an account! An appropriate message will appear at the end of the process.
@@ -83,7 +81,7 @@ If your account has been successfully created, you will see two corresponding ne
 
 You will also be able to go back to http://localhost:3000/login and "login" with the new account.
 
-###### Profiles
+#### Profiles
 Open any of the following to check out some of the profiles in the sample database:
 ```
 http://localhost:3000/u/zack_gym
@@ -97,8 +95,8 @@ This works for any profile, and if you go to localhost:3000/u/username for a use
 
 Much more profile information will be added to this page for later submissions.
 
-###### Leaderboard
+#### Leaderboard
 Open http://localhost:3000/leaderboard to see a leaderboard for the 3 categories of lifts.
 
-###### Head to Head
+#### Head to Head
 Open to http://localhost:3000/h2h to compare any two users' lifts.
