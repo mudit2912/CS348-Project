@@ -1,6 +1,7 @@
 // Get environment variables
 require('dotenv').config();
 
+const { query } = require('express');
 // Dependencies
 const express = require('express');
 const session = require('express-session');
@@ -24,6 +25,38 @@ const dbpool = mysql.createPool({
 /*
 *   Route Handlers
 */
+
+router.post('/toplifts/global', async function (req, res, next) {
+  dbpool.getConnection((connect_err, conn)=>{
+    if (connect_err) return res.status(500).json({msg: 'Error connecting to the database.'});
+
+    const query_str = 'SELECT id, first_name, last_name, totalkg FROM Person, Lifts WHERE Person.id = Lifts.powerlifter_id ORDER BY totalkg DESC LIMIT ?;';
+    conn.query(query_str, [req.body.limit],
+      (query_err, result, fields) => {
+        console.log(query_err);
+        if (query_err) return res.status(500).json({msg: 'Error querying DB.'});
+        if (result.length === 0) return res.status(404).json({msg: 'No lifts found.'});
+        return res.status(200).json(result);
+      }
+    );
+  });
+});
+
+router.post('/toplifts/national', async function (req, res, next) {
+  dbpool.getConnection((connect_err, conn)=>{
+    if (connect_err) return res.status(500).json({msg: 'Error connecting to the database.'});
+
+    const query_str = 'SELECT id, first_name, last_name, totalkg FROM Person, Lifts WHERE Person.id = Lifts.powerlifter_id AND meet_id IN (SELECT meet_id FROM Meet WHERE country = ?) ORDER BY totalkg DESC LIMIT ?;';
+    conn.query(query_str, [req.body.country, req.body.limit],
+      (query_err, result, fields) => {
+        console.log(query_err);
+        if (query_err) return res.status(500).json({msg: 'Error querying DB.'});
+        if (result.length === 0) return res.status(404).json({msg: 'No lifts found.'});
+        return res.status(200).json(result);
+      }
+    );
+  });
+});
 
 router.post('/auth/login', async function (req, res, next) {
   dbpool.getConnection((connect_err, conn)=>{

@@ -76,3 +76,31 @@ export async function getProfileInfo(username) {
   const resultjson = await resp.json();
   return({status: resp.status, data: resultjson});
 }
+
+// --------------------
+// LEADERBOARD
+// --------------------
+
+export async function getGlobalLeaderboard(limit) {
+  const resp = await fetch('http://127.0.0.1:5050/api/toplifts/global', {
+    method: 'POST', credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({limit: limit})
+  });
+  const resultjson = await resp.json();
+  return({status: resp.status, data: resultjson});
+}
+
+export async function getNationalLeaderboard(limit, country) {
+  const resp = await fetch('http://127.0.0.1:5050/api/toplifts/national', {
+    method: 'POST', credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({limit: limit, country: country})
+  });
+  const resultjson = await resp.json();
+  return({status: resp.status, data: resultjson});
+}

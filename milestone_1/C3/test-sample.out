@@ -1,30 +1,55 @@
 --
--- Feature #1
+-- Feature #1 Output
+-- Global Leaderboard
 --
+Attributes: (id, first_name, last_name, total_kg)
+
+Values:
+(3, Kabeelan, Sivamanoharan, 570),
+(5, Muhammad, Rabee, 470),
+(3, Kabeelan, Sivamanoharan, 465),
+(2, Mudit, Gupta, 433.18),
+(3, Kabeelan, Sivamanoharan, 422.5)
+
+--
+-- Feature #1 Output
+-- National Leaderboard
+--
+Attributes: (id, first_name, last_name, total_kg)
+
+Values:
+(3, Kabeelan, Sivamanoharan, 570),
+(5, Muhammad, Rabee, 470),
+(3, Kabeelan, Sivamanoharan, 465),
+(3, Kabeelan, Sivamanoharan, 422.5),
+(5, Muhammad, Rabee, 420),
 
 
 --
--- Feature #2
+-- Feature #2 Output
 --
+Attributes: (id, meet_name, meet_date, meet_state, meet_country, best3, benchkg, best3, squatkg, best3, deadliftkg)
+
+Values:
+(2, Melbourne Cup, 2018-10-27, VIC, AUS, 72.5, 152.5, 182.5),
+(2, Nationals, 2015-05-19, NULL, AUS, 163.29, 88.45, 181.44),
+(5, Nationals, 2018-06-02, WV, USA, 160, 145, 165),
+(5, Mountaineer Cup, 2002-06-22, WV, USA, 140, 107.5, 172.5),
+(5, Winter Wreckage, 2016-12-03, WV, USA, 115, 83, 150.5)
 
 
 --
--- Feature #3
+-- Feature #3 Output
 --
-The query will return the following relation with only one attribute (powerlifter_id):
+Attributes: (powerlifter_id)
 
-------------------
-| powerlifter_id |
-------------------
-|       2        |
-------------------
-|       3        |
-------------------
-|       5        |
-------------------
+Values:
+(2),
+(3),
+(5)
 
 --
--- Feature #4
+-- Feature #4 Output
 --
 No output. However, the Person and User tables will now contain the following new tuples, respectively:
 

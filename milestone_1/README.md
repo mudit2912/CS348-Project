@@ -95,8 +95,13 @@ This works for any profile, and if you go to localhost:3000/u/username for a use
 
 Much more profile information will be added to this page for later submissions.
 
-#### Leaderboard
-Open http://localhost:3000/leaderboard to see a leaderboard for the 3 categories of lifts.
+#### Global Leaderboard
+Open http://localhost:3000/leaderboard/global to see a leaderboard of the top lifters.
 
-#### Head to Head
-Open to http://localhost:3000/h2h to compare any two users' lifts.
+You can choose the maximum number of results and hit 'Load' to query the database.
+
+#### National Leaderboard
+Open http://localhost:3000/leaderboard/national to see a leaderboard of the top lifters in a given country.
+
+You can choose the maximum number of results, as well type in as the desired country (try 'USA' or 'Australia'), and hit 'Load' to query the database.
+

@@ -45,7 +45,7 @@ form.auth.form {
   margin: auto;
 }
 
-input.auth.input, select.auth.input {
+input.auth.input, select.auth.input, input.leaderboard.input {
   width: calc(100% - 20px);
   height: 40px;
   border: 1px solid var(--green);
@@ -65,7 +65,7 @@ input.auth.input.last {
   margin-bottom: 20px;
 }
 
-button.auth {
+button.auth, button.leaderboard.button {
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -127,4 +127,57 @@ h1.profile.username {
 h3.profile.bio {
   margin-top: 30px;
   font-weight: 500;
+}
+
+div.leaderboard.cont {
+  width: 100vw;
+  text-align: center;
+
+  margin-top: 110px;
+}
+
+h1.leaderboard.title {
+  margin-bottom: 30px;
+}
+
+div.leaderboard.indiv {
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+div.leaderboard.table {
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+h2.leaderboard.in.label {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+div.leaderboard.row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 10px;
+}
+
+h1.leaderboard.name {
+  font-size: 15px;
+  margin: 0;
+}
+
+h2.leaderboard.score {
+  font-size: 15px;
+  margin: 0;
+  margin-right: 0px;
+  margin-left: auto;
 }
