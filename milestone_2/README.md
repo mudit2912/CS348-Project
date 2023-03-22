@@ -1,4 +1,4 @@
-# CS348 Project (Milestone 1)
+# CS348 Project (Milestone 2)
 
 ## Pre-Requisites
 Must have docker installed.
