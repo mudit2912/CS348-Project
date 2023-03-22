@@ -1,0 +1,183 @@
+html, body, #root {
+  width: 100%;
+  /* height: 100%; */
+  margin: 0;
+}
+
+* {
+  font-family: 'Inter';
+}
+
+:root {
+  --green: #228b75;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+div.auth.cont, div.profile.cont {
+  width: 100vw;
+  text-align: center;
+
+  margin-top: calc(30vh - 100px);
+}
+
+h1.auth.title {
+  font-size: 35px;
+  font-family: 'Inter';
+  font-weight: 700;
+
+  margin-left: 0px;
+  margin-right: auto;
+  margin-bottom: 35px;
+
+  color: black;
+}
+
+form.auth.form {
+  width: 300px;
+  margin: auto;
+}
+
+input.auth.input, select.auth.input, input.leaderboard.input {
+  width: calc(100% - 20px);
+  height: 40px;
+  border: 1px solid var(--green);
+  background: transparent;
+  border-radius: 5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+select.auth.input {
+  width: 100%;
+}
+
+input.auth.input.last {
+  margin-bottom: 20px;
+}
+
+button.auth, button.leaderboard.button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  background-color: var(--green);
+  color: white;
+}
+
+label.auth.label {
+  font-size: 20px;
+}
+
+h2.auth.label.text {
+  text-align: left;
+  color: black;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+button.auth.switch {
+  width: 100%;
+  height: 65px;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  background-color: transparent;
+}
+
+button.auth.switch > span.green {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+h1.profile.subtext {
+  font-size: 15px;
+}
+
+div.profile.top {
+  display: inline-flex;
+}
+
+img.profile.image {
+  width: 125px;
+  height: 125px;
+  border-radius: 70px;
+}
+
+h1.profile.username {
+  margin-top: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+h3.profile.bio {
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+div.leaderboard.cont {
+  width: 100vw;
+  text-align: center;
+
+  margin-top: 110px;
+}
+
+h1.leaderboard.title {
+  margin-bottom: 30px;
+}
+
+div.leaderboard.indiv {
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+div.leaderboard.table {
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+h2.leaderboard.in.label {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+div.leaderboard.row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 10px;
+}
+
+h1.leaderboard.name {
+  font-size: 15px;
+  margin: 0;
+}
+
+h2.leaderboard.score {
+  font-size: 15px;
+  margin: 0;
+  margin-right: 0px;
+  margin-left: auto;
+}
