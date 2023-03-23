@@ -4,24 +4,42 @@ import React, { useState, useEffect } from "react";
 // API Imports
 import { getRowsSample } from "../../apicalls/WrappedCalls.js";
 
-// Functional Component for DB Rows
-function DBRows(props) {
+// Functional Component for Home Feed
+function HomeFeed(props) {
   const data = props.data;
 
-  // Function to render rows from DB Data
-  function renderRows() {
+  // Function to render feed timeline
+  function buildTimeline() {
     var r = [];
 
     const count = data.names.length;
     for (var i=0; i<count; i++) {
       r.push(
-        <h3>
-          {`Name: ${data.names[i]}
-            || Age: ${data.ages[i]}
-            || Gender: ${data.genders[i]}
-            || Weight: ${data.bodyweightkgs[i]}kg
-            || Event (Equipment): ${data.events[i]} (${data.equipments[i]})`}
-        </h3>
+        <div className="home feed post">
+          <div className="top">
+            <img src={data.pfps[i]} />
+            <a href={'/u/'+data.usernames[i]} target="_blank">
+              {data.names[i]}
+            </a>
+          </div>
+          <div className="bottom">
+            <h2>{data.dates}</h2>
+            <div className="lifts">
+              <div>
+                <h3>Bench (kg)</h3>
+                <h1>{data.bench[i]}</h1>
+              </div>
+              <div>
+                <h3>Squat (kg)</h3>
+                <h1>{data.squat[i]}</h1>
+              </div>
+              <div>
+                <h3>Deadlift (kg)</h3>
+                <h1>{data.deadlift[i]}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
       );
     }
 
@@ -30,8 +48,8 @@ function DBRows(props) {
 
   // Layout
   return(
-    <div>
-      { renderRows() }
+    <div className="home feed">
+      { buildTimeline() }
     </div>
   );
 }
@@ -39,25 +57,37 @@ function DBRows(props) {
 // Functional Component for Home Page
 function Home(props) {
   // States
-  const [sampleData, setSampleData] = useState(null);
-  const [sampleDataLoaded, setSampleDataLoaded] = useState(false);
+  const [feedData, setFeedData] = useState(null);
+  const [feedLoaded, setFeedLoaded] = useState(false);
 
   // Effects
   useEffect(() => {
-    async function loadData() {
-      const response = await getRowsSample();
-      setSampleData(response);
-      setSampleDataLoaded(true);
+    async function loadFeed() {
+      /*
+      const response = await getUserFeed();
+      if (!response.ok) return;
+      setFeedData(response.data);
+      setFeedLoaded(true);
+      */
+      setFeedData({
+        pfps: ["https://images.pexels.com/photos/2729899/pexels-photo-2729899.jpeg"],
+        usernames: ["zack_gym"],
+        names: ["Zack M"],
+        dates: ["Jun 15 2022"],
+        bench: [205],
+        squat: [300],
+        deadlift: [375]
+      })
+      setFeedLoaded(true);
     }
-    loadData();
+    loadFeed();
   }, []);
 
   // Layout
   return(
-    <div>
-      <h1>Hello world!</h1>
-      <h2>Just a demo to show we can load the DB, have the backend query the DB, and return it to the frontend.</h2>
-      { (sampleDataLoaded) && <DBRows {...{data: sampleData}} />}
+    <div className="home cont">
+      <h1>Home</h1>
+      { (feedLoaded) && <HomeFeed {...{data: feedData}} /> }
     </div>
   );
 }

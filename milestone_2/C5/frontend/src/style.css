@@ -104,6 +104,72 @@ button.auth.switch > span.green {
   text-decoration: underline;
 }
 
+div.home.cont {
+  width: 100vw;
+  text-align: center;
+  margin-top: calc(10vh);
+}
+
+div.home.feed {
+  width: 500px;
+  text-align: left;
+  margin: auto;
+}
+
+div.home.feed.post {
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+div.home.feed.post > div.top {
+  display: flex;
+}
+
+div.home.feed.post > div.top > img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 17px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+div.home.feed.post > div.top > a {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div.home.feed.post > div.bottom > div.lifts {
+  display: inline-flex;
+  width: 100%;
+}
+
+div.home.feed.post > div.bottom > div.lifts > div {
+  width: 33.33%;
+  text-align: center;
+  margin: 0;
+}
+
+div.home.feed.post > div.bottom > div.lifts > div > h3 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+div.home.feed.post > div.bottom > div.lifts > div > h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+div.profile.cont {
+  width: 100vw;
+  text-align: center;
+  margin-top: calc(10vh);
+}
+
 h1.profile.subtext {
   font-size: 15px;
 }
@@ -180,4 +246,20 @@ h2.leaderboard.score {
   margin: 0;
   margin-right: 0px;
   margin-left: auto;
+}
+
+div.h2h.cont {
+
+}
+
+div.h2h.top {
+
+}
+
+div.h2h.middle {
+
+}
+
+div.h2h.bottom {
+  
 }

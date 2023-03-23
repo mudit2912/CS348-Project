@@ -15,7 +15,8 @@ function ProfileView(props) {
     // States
     const [profileLoaded, setProfileLoaded] = useState(0); // -1 => Error / Profile not found, 0 => Loading, 1 => Success
     const [userInfo, setUserInfo] = useState({});
-    
+    const [showingPage, setShowingPage] = useState(0);
+
     // Get user info on page load
     useEffect(()=> {
         async function loadProfile() {
@@ -27,7 +28,6 @@ function ProfileView(props) {
             setUserInfo(response.data);
             setProfileLoaded(1);
         }
-        console.log("Here!");
         loadProfile();
     }, []);
 
@@ -44,6 +44,19 @@ function ProfileView(props) {
                     <img className="profile image" src={userInfo.pfp_url || default_pfp_url} />
                     <h1 className="profile username">@{userInfo.username}</h1>
                     <h3 className="profile bio">{userInfo.bio}</h3>
+                    <button className="profile favorite">Favorite</button>
+                </div>
+            }
+            {(profileLoaded === 1 && showingPage === 0) && 
+                <div>
+                </div>
+            }
+            {(profileLoaded === 1 && showingPage === 1) && 
+                <div>
+                </div>
+            }
+            {(profileLoaded === 1 && showingPage === 2) && 
+                <div>
                 </div>
             }
         </div>

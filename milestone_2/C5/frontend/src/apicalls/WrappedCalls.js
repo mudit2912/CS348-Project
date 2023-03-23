@@ -34,7 +34,7 @@ POST Wrapped Calls
 */
 
 // --------------------
-// AUTH
+//        AUTH
 // --------------------
 
 export async function getAuthStatus() {
@@ -72,7 +72,7 @@ export async function createUser(name, surname, gender, birth_month, birth_day, 
 }
 
 // --------------------
-// PROFILES
+//      PROFILES
 // --------------------
 
 export async function getProfileInfo(username) {
@@ -88,7 +88,23 @@ export async function getProfileInfo(username) {
 }
 
 // --------------------
-// LEADERBOARD
+//    HEAD TO HEAD
+// --------------------
+
+export async function getHeadToHeadComparison(a, b) {
+  const resp = await fetch('http://localhost:5050/api/h2h/compare', {
+    method: 'POST', credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({liftera: a, lifterb: b})
+  });
+  const resultjson = await resp.json();
+  return({status: resp.status, data: resultjson});
+}
+
+// --------------------
+//     LEADERBOARD
 // --------------------
 
 export async function getGlobalLeaderboard(limit) {
