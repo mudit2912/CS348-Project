@@ -78,7 +78,7 @@ CREATE TABLE `Scores` (
     `meet_id` INT NOT NULL,
     `wilks` DECIMAL(5,2),
     `mccullough` DECIMAL(5,2),
-    `glosbrenner` DECIMAL(5,2),
+    `glossbrenner` DECIMAL(5,2),
     `ipfp_points` DECIMAL(5,2),
     PRIMARY KEY (`powerlifter_id`, `meet_id`),
     FOREIGN KEY (`powerlifter_id`) REFERENCES `Powerlifter`(`id`) ON DELETE CASCADE,
