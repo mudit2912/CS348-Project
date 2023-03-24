@@ -50,6 +50,7 @@ function verifyAuth(req, res, next) {
 
 
 /* Auth Requests */
+
 router.get('/auth/status', verifyAuth, (req, res) => {
   return res.json({ 'auth': true });
 });
@@ -98,6 +99,7 @@ router.post('/auth/signup', async function (req, res, next) {
   });
 });
 
+
 /* User Requests */
 
 router.post('/user/info', async function (req, res, next) {
@@ -115,24 +117,29 @@ router.post('/user/info', async function (req, res, next) {
   });
 });
 
+
 /* Head to Head Requests */
 
 router.post('/h2h/compare', async function (req, res, next) {
   dbpool.getConnection((connect_err, conn)=>{
     if (connect_err) return res.status(500).json({msg: 'Error connecting to the database.'});
 
-    const id_query_str = 'SELECT id, username FROM User WHERE username IN (?,?);';
+    var returnjson = {users: {}, lifts: {}};
+    const id_query_str = 'SELECT id, username, pfp_url, bio FROM User WHERE username IN (?,?);';
     conn.query(id_query_str, [req.body.liftera, req.body.lifterb],
       (id_query_err, id_result, id_fields) => {
+        if (id_query_err) return res.status(500).json({msg: 'Error querying DB.'});
         if (id_result.length !== 2) return res.status(404).json({msg: 'One of the lifters was not found!'});
 
-        const query_str = 'SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ? UNION SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ?;';
+        returnjson.users = id_result;
+        const query_str = 'SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ? UNION SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ? ORDER BY meet_date DESC;';
         conn.query(query_str, [id_result[0].id, id_result[0].id, id_result[1].id, id_result[1].id],
           (query_err, result, fields) => {
             console.log(query_err);
             if (query_err) return res.status(500).json({msg: 'Error querying DB.'});
             if (result.length === 0) return res.status(404).json({msg: 'No lifts found.'});
-            return res.status(200).json(result);
+            returnjson.lifts = result;
+            return res.status(200).json(returnjson);
           }
         );
       })
@@ -149,7 +156,6 @@ router.post('/toplifts/global', async function (req, res, next) {
     const query_str = 'SELECT id, first_name, last_name, totalkg FROM Person, Lifts WHERE Person.id = Lifts.powerlifter_id ORDER BY totalkg DESC LIMIT ?;';
     conn.query(query_str, [req.body.limit],
       (query_err, result, fields) => {
-        console.log(query_err);
         if (query_err) return res.status(500).json({msg: 'Error querying DB.'});
         if (result.length === 0) return res.status(404).json({msg: 'No lifts found.'});
         return res.status(200).json(result);
@@ -165,7 +171,6 @@ router.post('/toplifts/national', async function (req, res, next) {
     const query_str = 'SELECT id, first_name, last_name, totalkg FROM Person, Lifts WHERE Person.id = Lifts.powerlifter_id AND meet_id IN (SELECT meet_id FROM Meet WHERE country = ?) ORDER BY totalkg DESC LIMIT ?;';
     conn.query(query_str, [req.body.country, req.body.limit],
       (query_err, result, fields) => {
-        console.log(query_err);
         if (query_err) return res.status(500).json({msg: 'Error querying DB.'});
         if (result.length === 0) return res.status(404).json({msg: 'No lifts found.'});
         return res.status(200).json(result);
@@ -173,6 +178,7 @@ router.post('/toplifts/national', async function (req, res, next) {
     );
   });
 });
+
 
 /* Catch all non-defined requests */
 
