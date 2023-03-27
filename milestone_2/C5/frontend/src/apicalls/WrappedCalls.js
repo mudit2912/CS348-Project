@@ -72,6 +72,23 @@ export async function createUser(name, surname, gender, birth_month, birth_day, 
 }
 
 // --------------------
+//      HOME FEED
+// --------------------
+
+export async function getHomeFeed(username) {
+  const resp = await fetch('http://localhost:5050/api/home/getfeed', {
+    method: 'POST', credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  const resultjson = await resp.json();
+  return({status: resp.status, data: resultjson});
+}
+
+
+
+// --------------------
 //      PROFILES
 // --------------------
 

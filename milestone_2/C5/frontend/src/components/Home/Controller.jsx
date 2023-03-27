@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 // API Imports
-import { getRowsSample } from "../../apicalls/WrappedCalls.js";
+import { getHomeFeed } from "../../apicalls/WrappedCalls.js";
 
 // Functional Component for Home Feed
 function HomeFeed(props) {
@@ -12,30 +12,31 @@ function HomeFeed(props) {
   function buildTimeline() {
     var r = [];
 
-    const count = data.names.length;
-    for (var i=0; i<count; i++) {
+    for (const [k, v] in Object.entries(data)) {
+      const value = data[k];
       r.push(
         <div className="home feed post">
           <div className="top">
-            <img src={data.pfps[i]} />
-            <a href={'/u/'+data.usernames[i]} target="_blank">
-              {data.names[i]}
+            <img src={value.pfp_url} />
+            <a href={'/u/'+value.username} target="_blank">
+              {value.username}
             </a>
           </div>
           <div className="bottom">
-            <h2>{data.dates}</h2>
+            <h2>{value.date}</h2>
+            <h2>{value.name}</h2>
             <div className="lifts">
               <div>
                 <h3>Bench (kg)</h3>
-                <h1>{data.bench[i]}</h1>
+                <h1>{value.best3benchkg}</h1>
               </div>
               <div>
                 <h3>Squat (kg)</h3>
-                <h1>{data.squat[i]}</h1>
+                <h1>{value.best3squatkg}</h1>
               </div>
               <div>
                 <h3>Deadlift (kg)</h3>
-                <h1>{data.deadlift[i]}</h1>
+                <h1>{value.best3deadliftkg}</h1>
               </div>
             </div>
           </div>
@@ -63,12 +64,22 @@ function Home(props) {
   // Effects
   useEffect(() => {
     async function loadFeed() {
+
+      const response = await getHomeFeed();
+      if (response.status !== 200) {
+        alert(response.data.msg);
+        return;
+      }
+
+      setFeedData(response.data);
+      setFeedLoaded(true);
       /*
       const response = await getUserFeed();
       if (!response.ok) return;
       setFeedData(response.data);
       setFeedLoaded(true);
       */
+     /*
       setFeedData({
         pfps: ["https://images.pexels.com/photos/2729899/pexels-photo-2729899.jpeg"],
         usernames: ["zack_gym"],
@@ -79,6 +90,7 @@ function Home(props) {
         deadlift: [375]
       })
       setFeedLoaded(true);
+      */
     }
     loadFeed();
   }, []);

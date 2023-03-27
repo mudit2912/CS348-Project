@@ -118,6 +118,24 @@ router.post('/user/info', async function (req, res, next) {
 });
 
 
+/* Home Feed */
+
+router.post('/home/getfeed', verifyAuth, async function (req, res, next) {
+  dbpool.getConnection((connect_err, conn) => {
+    if (connect_err) return res.status(500).json({msg: 'Error connecting to the database.'});
+
+    const query_str = 'SELECT User.username, User.pfp_url, Lifts.best3benchkg, Lifts.best3squatkg, Lifts.best3deadliftkg, Lifts.totalkg, M.name, M.date FROM Favourites AS fav JOIN Lifts ON fav.powerlifter_id = Lifts.powerlifter_id JOIN Meet AS M ON Lifts.meet_id = M.meet_id JOIN User ON fav.powerlifter_id = User.id WHERE fav.user_id IN (SELECT id FROM User WHERE username = ?) ORDER BY M.date DESC;';
+    conn.query(query_str, [req.user.username],
+      (query_err, result, fields) => {
+        console.log(query_err);
+        if (query_err) return res.status(500).json({msg: 'Error querying DB.'});
+        if (result.length === 0) return res.status(404).json({msg: 'No favorited lifters / lifts found.'});
+        return res.status(200).json(result);
+    });
+  });
+});
+
+
 /* Head to Head Requests */
 
 router.post('/h2h/compare', async function (req, res, next) {
@@ -132,7 +150,7 @@ router.post('/h2h/compare', async function (req, res, next) {
         if (id_result.length !== 2) return res.status(404).json({msg: 'One of the lifters was not found!'});
 
         returnjson.users = id_result;
-        const query_str = 'SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ? UNION SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ? ORDER BY meet_date DESC;';
+        const query_str = 'SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM Scores as s INNER JOIN Meet as m ON s.meet_id = m.meet_id AND s.powerlifter_id = ? INNER JOIN Lifts as l ON s.meet_id = l.meet_id AND s.powerlifter_id = ? UNION SELECT s.powerlifter_id as id, m.name as meet_name, m.date as meet_date, m.state as meet_state, m.country as meet_country, best3benchkg, best3squatkg, best3deadliftkg, totalkg, wilks, mccullough, glossbrenner, ipfp_points FROM (SELECT * from Scores where Scores.powerlifter_id = ?) as s INNER JOIN Meet as m ON s.meet_id = m.meet_id INNER JOIN Lifts as l ON s.meet_id = l.meet_id and l.powerlifter_id = ? ORDER BY meet_date DESC;';
         conn.query(query_str, [id_result[0].id, id_result[0].id, id_result[1].id, id_result[1].id],
           (query_err, result, fields) => {
             console.log(query_err);

@@ -256,10 +256,29 @@ div.h2h.top {
 
 }
 
-div.h2h.middle {
-
+div.h2h.comparison {
+  display: flex;
 }
 
-div.h2h.bottom {
-  
+div.h2h.comparison > div {
+  width: 50%;
+  margin: 0;
+  text-align: center;
+}
+
+div.h2h.comparison > div > img {
+  width: 125px;
+  height: 125px;
+  border-radius: 70px;
+}
+
+div.h2h.comparison > div > h1 {
+  margin-top: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+div.h2h.comparison > div > h3 {
+  margin-top: 30px;
+  font-weight: 500;
 }
