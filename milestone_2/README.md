@@ -46,7 +46,7 @@ docker compose prune
 ***Warning:*** This will delete all non-running containers from your machine.
 
 ## Demo
-Below is a list of features currently supported for Milestone 1, and how to see them in action.
+Below is a list of features currently supported for Milestone 2, and how to see them in action.
 
 Feel free to open http://localhost:8080 (MySQL Admin service) to take a look at the live database. You can login with:
 ```
@@ -55,6 +55,19 @@ Username: root
 Password: !admin!cs348
 Database: powerlifting_db
 ```
+
+List of backend files for implemented features:
+- All routes are in ~/C5/backend/allRoutes.js
+- Implementation of session management (authentication) is in ~/C5/backend/auth/authStrategy.js
+
+List of frontend files for implemented features:
+- Login (~/C5/frontend/src/components/Auth/Login.jsx)
+- Create Account (~/C5/frontend/src/components/Auth/SignUp.jsx)
+- Profiles (~/C5/frontend/src/components/Profile/ViewProfile.jsx)
+- Global Leaderboard (~/C5/frontend/src/components/Leaderboard/Global.jsx)
+- National Leaderboard (~/C5/frontend/src/components/Leaderboard/National.jsx)
+- Head to Head Comparison (~/C5/frontend/src/components/H2H/Controller.jsx)
+- Home Feed (~/C5/frontend/src/components/Home/Controller.jsx)
 
 #### Authentication
 Open http://localhost:3000/login.
@@ -68,9 +81,9 @@ Password: zack123
 Attempting to login with an incorrect username or password will give the appropriate error messages.
 A correct login will display a success message.
 
-This functionality will be extended upon for later submissions.
-- We will implement session management to store & maintain authentication states
-- /login and /signup will redirect to a home page if user is already logged in, and vice versa if user is not logged in
+## New in Milestone 2:
+- Session management (backend server stores & maintains authentication state)
+- Protected routes (can only access /login & /signup if not logged in)
 
 #### Create Account
 Open http://localhost:3000/signup, or click the 'Sign Up' button on the login page.
@@ -105,3 +118,16 @@ Open http://localhost:3000/leaderboard/national to see a leaderboard of the top 
 
 You can choose the maximum number of results, as well type in as the desired country (try 'USA' or 'Australia'), and hit 'Load' to query the database.
 
+#### Head to Head Comparison (NEW)
+Open http://localhost:3000/h2h to check out the head to head comparison.
+
+Type in any two usernames to display a side-by-side comparison of the two lifter's stats at every single meet.
+
+For example, try mgupta and mrabee as the two usernames.
+
+If you enter a username that does not exist, then an appropriate error message will be displayed.
+
+#### Home Feed (NEW)
+Open http://localhost:3000/home to check out the home feed.
+
+In the feed, the recent performances of all of a user's favorite powerlifters will be displayed in chronological order.
