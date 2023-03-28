@@ -3,6 +3,30 @@
 ## Pre-Requisites
 Must have docker installed.
 
+## Production Database 
+
+#### How We Generated the Production Dataset
+
+Run the following command in the sql-setup folder:
+python3 main.py
+
+This will create a SQL_SCRIPTS folder. Inside this folder are all the sql statements that need to be run. We consdolidated these files ourselves into the db-setup.sql file found in ./C5/backend/db-setup.sql, which is loaded into the MySQL server by Docker.
+If you were to run them manually, you would first run Person.sql and Meet.sql in the MySQL database. Then, run Powerlifter.sql. After that, you can run the rest of the files in whatever order you see fit.
+
+#### Loading Production Data into the DB
+As mentioned in the previous subsection, we consolidated the files created by our scripts into the db-setup.sql file, which is loaded into the MySQL server by Docker (db-setup file is located in ./C5/backend/db-setup.sql).
+
+However, the lifts are too large to be run by the db-setup.sql file. These must be loaded manually. To do so, start the application (following the instructions in the 'Starting the Application' section below).
+
+Open http://localhost:8080 (MySQL Admin service), with the following credentials:
+```
+Server: mysqldb
+Username: root
+Password: !admin!cs348
+Database: powerlifting_db
+```
+Click the 'Import' button on the left-hand menu. Then, import the 'lifts-setup.sql' file found in /C5/backend/lifts-setup.sql, and hit 'Execute'. Once that has completed, the production data has been fully loaded.
+
 ## Overview
 The C5 folder contains the following:
 
@@ -123,9 +147,9 @@ Open http://localhost:3000/h2h to check out the head to head comparison.
 
 Type in any two usernames to display a side-by-side comparison of the two lifter's stats at every single meet.
 
-For example, try mgupta and mrabee as the two usernames.
+For example, try mgupta and zack_gym as the two usernames.
 
-If you enter a username that does not exist, then an appropriate error message will be displayed.
+If you enter a username that does not exist, then an appropriate error message will be displayed. Also, if you enter a username that has no lifts, an error message will be displayed.
 
 #### Home Feed (NEW)
 Open http://localhost:3000/home to check out the home feed.

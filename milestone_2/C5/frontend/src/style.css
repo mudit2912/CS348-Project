@@ -252,10 +252,6 @@ div.h2h.cont {
 
 }
 
-div.h2h.top {
-
-}
-
 div.h2h.comparison {
   display: flex;
 }
@@ -281,4 +277,37 @@ div.h2h.comparison > div > h1 {
 div.h2h.comparison > div > h3 {
   margin-top: 30px;
   font-weight: 500;
+}
+
+div.h2h-top {
+  display: block;
+}
+
+div.h2h-top > h1, div.h2h-top > h2 {
+  margin: 0;
+}
+
+div.h2h-top > h1 {
+  font-size: 25px;
+}
+
+div.h2h-top > h2 {
+  font-size: 15px;
+}
+
+div.home.feed.post.h2h-bubble {
+  margin-bottom: 15px;
+}
+
+button.h2h-goback {
+  text-align: center;
+  margin: auto;
+  margin-left: calc(50% - 50px);
+  width: 100px;
+  margin-top: 25px;
+  border: none;
+  background-color: var(--green);
+  border-radius: 5px;
+  height: 45px;
+  color: white;
 }

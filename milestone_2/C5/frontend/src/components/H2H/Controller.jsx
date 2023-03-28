@@ -52,10 +52,10 @@ function HeadToHead(props) {
         var r = [];
         lifterData.forEach(x => {
             r.push(
-                <div className="home feed post">
-                    <div className="top">
-                        <h1>{x.meet_name}</h1>
+                <div className="home feed post h2h-bubble">
+                    <div className="h2h-top">
                         <h2>{x.meet_country}</h2>
+                        <h1>{x.meet_name}</h1>
                         <h2>{x.meet_date}</h2>
                     </div>
                     <div className="bottom">
@@ -111,7 +111,7 @@ function HeadToHead(props) {
             }
             {(showingPage === 1) &&
                 <div>
-                    <button onClick={()=>{setShowingPage(0);}}>Go Back</button>
+                    <button className="h2h-goback" onClick={()=>{setShowingPage(0);}}>Go Back</button>
                     <div className="h2h comparison">
                         <div>
                             <img src={lifterUser_A.pfp_url} />

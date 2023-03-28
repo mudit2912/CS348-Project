@@ -85,7 +85,12 @@
         meet_country: 'AUS',
         best3benchkg: 72.5,
         best3squatkg: 152.5,
-        best3deadliftkg: 182.5
+        best3deadliftkg: 182.5,
+        totalkg: 397.5,
+        wilks: 403.5,
+        mccullough: 419.64,
+        glossbrenner: 356.92,
+        ipfp_points: 628.60
     },
     {
         id: 2,
@@ -95,7 +100,12 @@
         meet_country: 'AUS',
         best3benchkg: 163.29,
         best3squatkg: 88.45,
-        best3deadliftkg: 181.44
+        best3deadliftkg: 181.44,
+        totalkg: 433.18,
+        wilks: 322.46,
+        mccullough: 322.46,
+        glossbrenner: 284.47,
+        ipfp_points: 528.11
     },
     {
         id: 5,
@@ -105,7 +115,12 @@
         meet_country: 'USA',
         best3benchkg: 160,
         best3squatkg: 145,
-        best3deadliftkg: 165
+        best3deadliftkg: 165,
+        totalkg: 470,
+        wilks: 304.56,
+        mccullough: 304.56,
+        glossbrenner: 294.83,
+        ipfp_points: 431.05
     },
     {
         id: 5,
@@ -115,7 +130,12 @@
         meet_country: 'USA',
         best3benchkg: 140,
         best3squatkg: 107.5,
-        best3deadliftkg: 172.5
+        best3deadliftkg: 172.5,
+        totalkg: 420,
+        wilks: 340.60,
+        mccullough: 340.60,
+        glossbrenner: 329.26,
+        ipfp_points: 494.05
     },
     {
         id: 5,
@@ -125,7 +145,12 @@
         meet_country: 'USA',
         best3benchkg: 115,
         best3squatkg: 83,
-        best3deadliftkg: 150.5
+        best3deadliftkg: 150.5,
+        totalkg: 348.5,
+        wilks: 387.28,
+        mccullough: 287.28,
+        glossbrenner: 372.36,
+        ipfp_points: 566.08
     }
 ]
 
@@ -164,3 +189,38 @@ User
 ------------------------------------------------------------------------------
 | 6 |  ed_coan  |  NULL   | 71x World Record Holder. | edcoan@powerlifty.com |
 ------------------------------------------------------------------------------
+
+
+--
+-- Feature #5 Output
+--
+
+'true'
+'Incorrect password or account does not exist'
+'Incorrect password or account does not exist'
+
+
+--
+-- Feature #6 Output
+--
+
+[
+    {
+        username: zack_gym,
+        pfp_url: https://this-person-does-not-exist.com/img/avatar-1114d6357eb8e8de042b095e89102b04.jpg,
+        meet_name: Melbourne Cup,
+        meet_date: 2018-10-27,
+        best3benchkg: 72.5,
+        best3squatkg: 152.5,
+        best3deadliftkg: 182.5
+    },
+    {
+        username: zack_gym,
+        pfp_url: https://this-person-does-not-exist.com/img/avatar-1114d6357eb8e8de042b095e89102b04.jpg,
+        meet_name: Nationals,
+        meet_date: 2015-05-19,
+        best3benchkg: 163.29,
+        best3squatkg: 88.45,
+        best3deadliftkg: 181.44
+    }
+]

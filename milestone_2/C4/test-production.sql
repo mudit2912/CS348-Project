@@ -84,7 +84,7 @@ BEGIN
     ON s.meet_id = l.meet_id AND s.powerlifter_id = user_b_id;
 END;
 
-SELECT * FROM compare_head_to_head(3,5);
+SELECT * FROM compare_head_to_head(1,2);
 
 
 --
@@ -99,6 +99,7 @@ BEGIN
 END;
 
 SELECT * FROM get_user_favourited(1);
+
 
 --
 -- Feature #4
@@ -127,3 +128,53 @@ BEGIN
 END;
 
 CALL insert_person_user('Ed','Coan','M','1963-07-24','ed_coan',NULL,'71x World Record Holder.','edcoan@powerlifty.com');
+
+
+--
+-- Feature #5
+--
+
+CREATE FUNCTION check_user(in_email varchar(100), pass varchar(100))
+RETURNS VARCHAR(50)
+BEGIN
+    DECLARE result VARCHAR(50);
+
+    IF NOT EXISTS (SELECT * FROM User WHERE in_email = email AND pw = pass) THEN SET result = ‘Incorrect password or account does not exist’
+    ELSE SET result = ‘true’
+    END IF
+
+    RETURN result;
+END;
+
+CALL check_user(zack_gym@powerlifty.com, zack123);
+CALL check_user(zackwrongemail@powerlifty.com, zack123);
+CALL check_user(zackgym@powerlifty.com, wrongpassword);
+
+
+
+--
+-- Feature #6
+--
+
+CREATE FUNCTION generate_user_feed(feed_user_id INT)
+RETURNS TABLE (
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+best3benchkg DECIMAL(5,2), 
+best3squatkg DECIMAL(5,2), 
+best3deadliftkgDECIMAL(5,2) , 
+totalkg DECIMAL(5,2),
+meet_name VARCHAR(150),
+	meet_date DATE
+)
+BEGIN
+	RETURN SELECT User.username, User.pfp_url, Lifts.best3benchkg, Lifts.best3squatkg, Lifts.best3deadliftkg, M.meet_name, M.meet_date 
+    FROM Favourites AS fav
+    JOIN Lifts ON fav.powerlifter_id =  Lifts.powerlifter_id 
+	JOIN Meets AS M ON Lifts.meet_id = M.meet_id
+	JOIN User ON fav.powerlifter_id = User.id
+	WHERE fav.user_id = feed_user_id
+	ORDER BY M.date DESC
+END;
+
+SELECT * FROM generate_user_feed(1);

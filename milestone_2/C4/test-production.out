@@ -41,34 +41,34 @@
 --
 [
     {
-        id: 3,
-        first_name: 'Kabeelan',
-        last_name: 'Sivamanoharan',
-        totalkg: 570
+        id: 2502,
+        first_name: 'Andrey'
+        last_name: 'Malanichev',
+        totalkg: 1120.00
     },
     {
-        id: 5,
-        first_name: 'Muhammad',
-        last_name: 'Rabee',
-        totalkg: 470
+        id: 60,
+        first_name: 'Lance'
+        last_name: 'Karabel',
+        totalkg: 1095.00
     },
     {
-        id: 3,
-        first_name: 'Kabeelan',
-        last_name: 'Sivamanoharan',
-        totalkg: 465
+        id: 28,
+        first_name: 'Brian'
+        last_name: 'Siders',
+        totalkg: 1080.00
     },
     {
-        id: 3,
-        first_name: 'Kabeelan',
-        last_name: 'Sivamanoharan',
-        totalkg: 422.5
+        id: 60,
+        first_name: 'Lance'
+        last_name: 'Karabel',
+        totalkg: 1075.00
     },
     {
-        id: 5,
-        first_name: 'Muhammad',
-        last_name: 'Rabee',
-        totalkg: 420
+        id: 76,
+        first_name: 'Mark'
+        last_name: 'Bell',
+        totalkg: 1072.50
     }
 ]
 
@@ -78,54 +78,169 @@
 --
 [
     {
-        id: 2,
-        meet_name: 'Melbourne Cup',
-        meet_date: '2018-10-27',
-        meet_state: 'VIC',
-        meet_country: 'AUS',
-        best3benchkg: 72.5,
-        best3squatkg: 152.5,
-        best3deadliftkg: 182.5
+        id: 1,
+        meet_name: "VIC States",
+        meet_date: "2019-04-06T00:00:00.000Z",
+        meet_state: "VIC",
+        meet_country: "Australia",
+        best3benchkg: 217.50,
+        best3squatkg: 217.50,
+        best3deadliftkg: 217.50,
+        totalkg: 217.50,
+        wilks: 132.37,
+        mccullough: 132.37,
+        glossbrenner: 127.22,
+        ipfp_points: 781.80000
+    },
+    {
+        id: 1,
+        meet_name: "Battle In Valhalla",
+        meet_date: "2018-07-31T00:00:00.000Z",
+        meet_state: "QLD",
+        meet_country: "Australia",
+        best3benchkg: 215.50,
+        best3squatkg: 215.50,
+        best3deadliftkg: 215.50,
+        totalkg: 215.50,
+        wilks: 131.26,
+        mccullough: 131.26,
+        glossbrenner: 126.15,
+        ipfp_points: 775.59000
     },
     {
         id: 2,
-        meet_name: 'Nationals',
-        meet_date: '2015-05-19',
-        meet_state: null,
-        meet_country: 'AUS',
+        meet_name: "Battle of the Badasses",
+        meet_date: "2017-08-19T00:00:00.000Z",
+        meet_state: "AR",
+        meet_country: "USA",
         best3benchkg: 163.29,
-        best3squatkg: 88.45,
-        best3deadliftkg: 181.44
+        best3squatkg: 163.29,
+        best3deadliftkg: 163.29,
+        totalkg: 571.53,
+        wilks: 352.85,
+        mccullough: 381.08,
+        glossbrenner: 339.45,
+        ipfp_points: 509.68000
     },
     {
-        id: 5,
-        meet_name: 'Nationals',
-        meet_date: '2018-06-02',
-        meet_state: 'WV',
-        meet_country: 'USA',
-        best3benchkg: 160,
-        best3squatkg: 145,
-        best3deadliftkg: 165
+        id: 2,
+        meet_name: "The Natural State Championships",
+        meet_date: "2017-03-11T00:00:00.000Z",
+        meet_state: "AR",
+        meet_country: "USA",
+        best3benchkg: 158.76,
+        best3squatkg: 158.76,
+        best3deadliftkg: 158.76,
+        totalkg: 510.29,
+        wilks: 312.87,
+        mccullough: 353.55,
+        glossbrenner: 300.85,
+        ipfp_points: 441.28000
     },
     {
-        id: 5,
-        meet_name: 'Mountaineer Cup',
-        meet_date: '2002-06-22',
-        meet_state: 'WV',
-        meet_country: 'USA',
-        best3benchkg: 140,
-        best3squatkg: 107.5,
-        best3deadliftkg: 172.5
+        id: 1,
+        meet_name: "TJMEBD Nationals",
+        meet_date: "2016-10-14T00:00:00.000Z",
+        meet_state: "QLD",
+        meet_country: "Australia",
+        best3benchkg: 210.00,
+        best3squatkg: 210.00,
+        best3deadliftkg: 210.00,
+        totalkg: 210.00,
+        wilks: 126.54,
+        mccullough: 126.54,
+        glossbrenner: 121.52,
+        ipfp_points: 742.94000
     },
     {
-        id: 5,
-        meet_name: 'Winter Wreckage',
-        meet_date: '2016-12-03',
-        meet_state: 'WV',
-        meet_country: 'USA',
-        best3benchkg: 115,
-        best3squatkg: 83,
-        best3deadliftkg: 150.5
+        id: 1,
+        meet_name: "Summer Classic",
+        meet_date: "2016-01-18T00:00:00.000Z",
+        meet_state: "VIC",
+        meet_country: "Australia",
+        best3benchkg: 202.50,
+        best3squatkg: 202.50,
+        best3deadliftkg: 202.50,
+        totalkg: 202.50,
+        wilks: 123.64,
+        mccullough: 123.64,
+        glossbrenner: 118.85,
+        ipfp_points: 731.58000
+    },
+    {
+        id: 1,
+        meet_name: "Nationals",
+        meet_date: "2015-05-19T00:00:00.000Z",
+        meet_state: null,
+        meet_country: "Australia",
+        best3benchkg: 195.00,
+        best3squatkg: 195.00,
+        best3deadliftkg: 195.00,
+        totalkg: 195.00,
+        wilks: 119.61,
+        mccullough: 119.61,
+        glossbrenner: 115.02,
+        ipfp_points: 709.45000
+    },
+    {
+        id: 1,
+        meet_name: "VIC States",
+        meet_date: "2015-02-20T00:00:00.000Z",
+        meet_state: "VIC",
+        meet_country: "Australia",
+        best3benchkg: 185.00,
+        best3squatkg: 185.00,
+        best3deadliftkg: 185.00,
+        totalkg: 185.00,
+        wilks: 112.95,
+        mccullough: 112.95,
+        glossbrenner: 108.58,
+        ipfp_points: 668.37000
+    },
+    {
+        id: 2,
+        meet_name: "Nationals",
+        meet_date: "2014-06-05T00:00:00.000Z",
+        meet_state: "QLD",
+        meet_country: "Australia",
+        best3benchkg: 95.00,
+        best3squatkg: 95.00,
+        best3deadliftkg: 95.00,
+        totalkg: 382.50,
+        wilks: 279.50,
+        mccullough: 287.89,
+        glossbrenner: 270.59,
+        ipfp_points: 388.53000
+    },
+    {
+        id: 2,
+        meet_name: "Nationals",
+        meet_date: "2013-06-14T00:00:00.000Z",
+        meet_state: null,
+        meet_country: "Australia",
+        best3benchkg: 95.00,
+        best3squatkg: 95.00,
+        best3deadliftkg: 95.00,
+        totalkg: 430.00,
+        wilks: 322.59,
+        mccullough: 335.49,
+        glossbrenner: 312.59,
+        ipfp_points: 459.90000
+    },
+    {
+        id: 2,
+        meet_name: "QLD State Titles",
+        meet_date: "2013-04-06T00:00:00.000Z",
+        meet_state: "QLD",
+        meet_country: "Australia",
+        best3benchkg: 87.50,
+        best3squatkg: 87.50,
+        best3deadliftkg: 87.50,
+        totalkg: 405.00,
+        wilks: 313.76,
+        mccullough: 370.23,
+        glossbrenner: 304.39,
+        ipfp_points: 442.74000
     }
 ]
 
@@ -134,12 +249,6 @@
 -- Feature #3 Output
 --
 [
-    {
-        powerlifter_id: 2
-    },
-    {
-        powerlifter_id: 3
-    },
     {
         powerlifter_id: 5
     }
@@ -164,3 +273,30 @@ User
 ------------------------------------------------------------------------------
 | 6 |  ed_coan  |  NULL   | 71x World Record Holder. | edcoan@powerlifty.com |
 ------------------------------------------------------------------------------
+
+
+--
+-- Feature #5 Output
+--
+
+'true'
+'Incorrect password or account does not exist'
+'Incorrect password or account does not exist'
+
+
+--
+-- Feature #6 Output
+--
+
+[
+    {
+        username: harjot_fitness,
+        pfp_url: https://this-person-does-not-exist.com/img/avatar-115f2e9b28a429908c6823bcc5f1bedc.jpg,
+        meet_name: ACT States,
+        meet_date: 2017-04-02T00:00:00.000Z,
+        best3benchkg: 216.00,
+        best3squatkg: 216.00,
+        best3deadliftkg: 216.00
+    }
+]
+
