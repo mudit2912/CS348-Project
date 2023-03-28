@@ -56,7 +56,7 @@ This docker-compose.yml file defines the services for our full-stack web applica
 
 ## Starting the Application
 1. Open terminal
-2. cd into milestone_1/C5
+2. cd into milestone_2/C5
 3. Build the project with the following command:
 ```
 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
