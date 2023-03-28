@@ -6,12 +6,17 @@ Must have docker installed.
 ## Production Database 
 
 #### How We Generated the Production Dataset
-
-Run the following command in the sql-setup folder:
+Run the following command in the ./C2/prod_dataset_scripts folder:
 python3 main.py
 
-This will create a SQL_SCRIPTS folder. Inside this folder are all the sql statements that need to be run. We consdolidated these files ourselves into the db-setup.sql file found in ./C5/backend/db-setup.sql, which is loaded into the MySQL server by Docker.
-If you were to run them manually, you would first run Person.sql and Meet.sql in the MySQL database. Then, run Powerlifter.sql. After that, you can run the rest of the files in whatever order you see fit.
+Requirements:
+Other than installing python3, the following package(s) are required to run:
+```
+pip install pandas
+```
+
+This will create a SQL_SCRIPTS folder. Inside this folder are all the sql statements that need to be run. We consolidated these files ourselves into the db-setup.sql file found in ./C5/backend/db-setup.sql, which is loaded into the MySQL server by Docker, and into the production-db.sql file found in the C2 directory.
+If you were to execute these queries manually, you would first run Person.sql and Meet.sql in the MySQL database. Then, run Powerlifter.sql. After that, you can run the rest of the files in whatever order you see fit.
 
 #### Loading Production Data into the DB
 As mentioned in the previous subsection, we consolidated the files created by our scripts into the db-setup.sql file, which is loaded into the MySQL server by Docker (db-setup file is located in ./C5/backend/db-setup.sql).

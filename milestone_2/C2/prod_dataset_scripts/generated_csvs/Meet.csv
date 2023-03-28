@@ -1,0 +1,503 @@
+federation,date,meet_country,meet_state,meet_name,meet_id
+GPC-AUS,2015-05-19,Australia,,Nationals,1
+GPC-AUS,2013-06-14,Australia,,Nationals,2
+GPC-AUS,2018-07-31,Australia,QLD,Battle In Valhalla,4
+GPC-AUS,2017-04-02,Australia,ACT,ACT States,5
+GPC-AUS,2013-03-17,Australia,VIC,Victoria States,6
+GPC-AUS,2016-10-14,Australia,QLD,TJMEBD Nationals,7
+GPC-AUS,2015-02-20,Australia,VIC,VIC States,8
+GPC-AUS,2014-06-05,Australia,QLD,Nationals,9
+GPC-AUS,2018-04-07,Australia,QLD,QLD States,10
+GPC-AUS,2013-04-06,Australia,QLD,QLD State Titles,11
+GPC-AUS,2019-01-19,Australia,VIC,Summer Classic,12
+GPC-AUS,2013-03-22,Australia,ACT,ACT States,13
+GPC-AUS,2016-01-18,Australia,VIC,Summer Classic,14
+GPC-AUS,2019-04-06,Australia,VIC,VIC States,15
+USPF,2018-06-02,USA,WV,Nationals,16
+USPF,2016-03-26,USA,WV,WV State Meet,22
+USPF,2002-06-22,USA,WV,Mountaineer Cup,23
+USPF,2016-12-03,USA,WV,Winter Wreckage,31
+USPF,2010-06-19,USA,RI,Nationals,32
+USPF,2010-12-11,USA,WV,Region 4 Open Championships,66
+USPF,2010-02-20,USA,OR,Northwest Powerlifting Championships,73
+USPF,2018-12-08,USA,IL,IL Winter Meet,93
+USPF,2017-04-01,USA,WV,WV State and Mountaineer Open,97
+USPF,2003-06-23,USA,WV,Senior & Masters Nationals,98
+USPF,2003-11-15,USA,TX,Texas Cup,107
+USPF,2016-02-06,USA,MI,Michigan State Meet,112
+USPF,2009-07-03,USA,CA,Nationals,113
+USPF,2015-12-05,USA,WV,Region 2 Championships,329
+USPF,2003-06-23,USA,WV,Mountaineer Cup,330
+USPF,2012-07-07,USA,OH,Nationals,336
+USPF,2016-08-06,USA,IL,Power on the Platform,347
+USPF,2008-06-29,USA,RI,Multi-Nationals,352
+USPF,2010-07-10,USA,WV,Patriot Challenge,413
+USPF,2001-06-24,USA,WV,Mountaineer Cup,415
+USPF,2018-11-17,USA,NY,NY Push Pull,418
+RUPC,2013-02-24,USA,FL,Raw Unity VI,422
+RUPC,2011-01-22,USA,FL,Raw Unity IV,439
+RUPC,2012-01-21,USA,TX,Raw Unity V,479
+RUPC,2014-02-07,USA,FL,Raw Unity VII,494
+RUPC,2015-02-07,USA,FL,Raw Unity VIII,546
+RUPC,2016-01-31,USA,FL,Raw Unity IX,598
+RUPC,2008-01-26,USA,FL,Raw Unity I,617
+RUPC,2009-01-24,USA,FL,Raw Unity II,630
+RUPC,2010-01-30,USA,FL,Raw Unity III,652
+UkrainePF,2006-04-17,Ukraine,,Ukrainian Bench Press Championships,693
+UkrainePF,2004-03-02,Ukraine,,Ukrainian Powerlifting Championships,694
+UkrainePF,2004-07-03,Ukraine,,Ukrainian Bench Press Championships,695
+UkrainePF,2003-06-28,Ukraine,,Ukrainian Bench Press Championships,696
+UkrainePF,2005-03-02,Ukraine,,Ukrainian Powerlifting Championships,697
+UkrainePF,2005-07-02,Ukraine,,Ukrainian Bench Press Championships,698
+UkrainePF,2003-12-18,Ukraine,,Ukrainian Powerlifting Cup,699
+UkrainePF,2004-12-17,Ukraine,,Ukrainian Powerlifting Cup,700
+WPF,2007-11-22,Mexico,,World Powerlifting and Bench Press Championships,701
+WPF,2011-11-11,USA,FL,World Powerlifting Championships,720
+WPF,2009-11-13,USA,,World Championships,756
+WPF,2008-11-13,Austria,,World Championships,970
+USA-UA,2018-12-15,USA,FL,Hybrid Deadlift Invitational,990
+USA-UA,2013-10-13,USA,TN,Night of the Living Deadlift,1003
+USA-UA,2010-10-23,USA,TN,Night of the Living Deadlift,1013
+USA-UA,2006-05-06,USA,MA,Atlantis New England Record Breakers,1022
+USA-UA,2011-10-22,USA,TN,Night of the Living Deadlift,1032
+USA-UA,2019-01-26,USA,IL,JBBOSS Party on the Platform,1044
+ADFPA,1995-07-15,USA,PA,Men's Nationals,1048
+JPA,2000-11-05,Japan,,Japanese Classic Bench Press & Firefighter/Police/SDF Bench Press Championships,1086
+NORCAL,2018-03-25,USA,CA,Regionals,1087
+NORCAL,2017-08-06,USA,CA,California State Open,1092
+NORCAL,2016-11-06,USA,CA,West Coast Championship,1093
+NORCAL,2015-11-15,USA,CA,American Event,1099
+NORCAL,2014-02-23,USA,CA,Winter Powerlifting Championship,1104
+NORCAL,2017-11-05,USA,CA,NorCal Powerlifting Open,1114
+NORCAL,2017-03-26,USA,CA,Regionals,1117
+NORCAL,2015-08-01,USA,CA,California State,1120
+NORCAL,2014-06-29,USA,CA,State Championship,1126
+NORCAL,2015-03-07,USA,CA,Regionals,1129
+NORCAL,2016-03-20,USA,CA,I Powerlift Like a Girl,1132
+NORCAL,2018-07-22,USA,CA,Strengh In Diversity,1137
+SSA,2010-10-16,USA,NY,Asylum Power,1138
+APA,2013-03-09,USA,CA,Old Skool Iron Classic,1140
+APA,2018-09-08,USA,WA,Washington Open Championships,1159
+APA,2013-04-20,USA,CA,California Raw Championships,1164
+APA,2018-01-27,USA,MA,Give Strength Push Pull,1170
+WPA,2011-05-21,USA,CA,World Championships,1173
+APA,2019-02-02,USA,AR,Razorback Open,1211
+APA,2016-02-27,USA,IN,Midwest Raw Regional Power Showdown,1213
+APA,2019-04-06,USA,MA,Northeast United States Championships,1218
+APA,2017-08-05,USA,MI,Michigan Summer Iron Bash,1222
+WPA,2016-10-06,USA,OR,World Championships,1225
+APA,2018-12-15,USA,MO,Midwest Battle of the Beasts,1395
+APA,2017-03-18,USA,MI,Michigan Open Championships,1396
+APA,2008-01-12,USA,FL,Tampa Open Championships,1402
+APA,2015-07-25,USA,AL,Alabama Raw Wars State Championship,1407
+APA,1989-12-02,USA,NH,Northeastern U.S. Bench Press & Submaster/Masters Bench Press Nationals,1420
+APA,2017-07-22,USA,MO,Missouri Raw Summer Iron Bash,1423
+APA,2018-04-07,USA,MO,Nationals,1427
+APA,2019-03-30,USA,MO,Unbreakable Warrior Raw Classic,1433
+APA,2015-11-21,USA,MA,Massachusetts Bar Bending Battle,1435
+APA,2018-01-27,USA,MO,Show Me State Iron Bash,1436
+APA,2017-03-11,USA,AR,The Natural State Championships,1439
+APA,2017-06-10,USA,AR,Clash of the Iron Warriors,1441
+APA,2016-03-19,USA,MI,Michigan Open Championships,1444
+APA,2016-01-16,USA,MO,District 5 Regionals,1463
+APA,2010-05-08,USA,DE,Delaware Power Classic,1481
+APA,2017-07-15,USA,TX,Lone Star Raw Championships,1482
+APA,2010-11-13,USA,FL,Ironfest Challenge,1484
+APA,2007-08-18,USA,OR,Oregon Open Championships,1488
+APA,2019-03-23,USA,TX,Lone Star Championships,1550
+APA,2008-10-25,USA,FL,Tony Conyers Extravaganza,1551
+APA,2015-04-11,USA,OR,Spring Challenge,1562
+APA,2018-01-20,USA,AR,Arkansas Open Raw Championships,1581
+APA,2016-09-17,USA,MI,Michigan Fall Iron Bash,1589
+APA,2011-11-19,USA,CA,West Coast Raw,1593
+APA,2010-11-14,USA,PA,Power Frenzy,1620
+APA,2018-02-24,USA,MO,Region V Championships,1621
+APA,2014-10-04,USA,OR,Elite Fall Classic,1624
+APA,2017-06-17,USA,NJ,Garden State Raw Championships,1637
+APA,2008-04-12,USA,WA,Northwest Open Iron War,1640
+APA,2018-07-21,USA,CO,Centennial State Open,1674
+APA,2012-04-21,USA,,Raw Nationals,1676
+APA,1989-11-05,USA,CT,North American Deadlift Championships,1687
+APA,2017-05-20,USA,OH,Raw Nationals,1693
+APA,2006-09-02,USA,FL,Nationals,1704
+APA,2011-11-05,USA,FL,IronFest,1733
+APA,2004-11-06,USA,TX,Lone Star Open,1740
+APA,2011-11-05,USA,,Power Frenzy,1742
+APA,2018-05-12,USA,VT,Can-Am Internationals,1747
+APA,2017-02-25,USA,MO,District 5 Regional Championships,1750
+APA,2017-05-13,USA,MS,Mississippi State Championships,1756
+APA,2017-11-11,USA,MS,Battle of the Iron Barbarians,1758
+APA,2017-09-02,USA,MO,Ozark Open,1759
+APA,2016-02-06,USA,MO,Midwest Raw Winter Iron Bash,1760
+APA,2012-06-16,USA,IL,Illinois Summer Iron Bash,1765
+APA,2005-05-29,USA,FL,Southeast Open,1766
+APA,2013-03-23,USA,OR,Spring Championships,1796
+APA,2017-07-29,USA,AL,Raw Wars III,1801
+APA,2015-09-19,USA,MI,Wolverine Open,1812
+APA,2016-11-19,USA,WA,Evergreen State Open Championships,1820
+APA,2016-01-30,USA,OR,Winter Classic,1824
+APA,2008-07-12,USA,FL,Southeast US Open,1852
+APA,2014-11-08,USA,FL,Ironfest,1866
+APA,2019-03-02,USA,WA,4K Raw Cash Meet,1882
+APA,2017-04-01,USA,TX,Sun City Championships,1885
+APA,2018-03-03,USA,MS,Magnolia Open,1890
+APA,2014-09-20,USA,CA,Plumas Thunder Power Classic,1891
+APA,2018-02-03,USA,MD,Southern Maryland Raw Championships,1895
+APA,2017-01-21,USA,AK,Rhino Open Championships,1896
+APA,2016-01-30,USA,FL,Thunder Bay Throwdown,1901
+APA,2009-11-14,USA,CA,California Raw Championships,1902
+APA,2004-05-22,USA,FL,Largo Open Bench Press & Push-Pull,1916
+APA,2015-04-25,USA,CA,California Raw Championships,1919
+APA,2010-10-09,USA,CA,Billy Funk Memorial Championships,1922
+APA,2015-11-07,USA,FL,Ironfest,1931
+APA,2017-04-22,USA,MO,ShowMe State Raw Championships,1946
+APA,2017-04-15,USA,TX,Region 6 Championships,1951
+APA,2017-12-02,USA,NH,New England Open Championships,1953
+APA,2017-10-07,USA,TX,US Open,1956
+APA,1989-12-08,USA,VT,Vermont Open Deadlift Championships,1958
+APA,2017-08-19,USA,AR,Battle of the Badasses,1960
+APA,2007-09-30,USA,FL,Nationals,1966
+APA,2017-02-11,USA,MS,Magnolia Open Championships,1988
+APA,2010-04-17,USA,CA,All Raw Northwest Region Powerlifting Championships,1989
+APA,2019-03-23,USA,MI,Great Lakes Open,1998
+APA,2010-11-20,USA,CA,West Coast Raw Powerlifting Championships,1999
+APA,2018-07-07,USA,MS,Iron Warrior Classic,2074
+APA,2017-10-28,USA,MA,30th Annual Bay State Open,2075
+APA,2014-08-09,USA,MS,Magnolia Open,2079
+APA,2016-03-05,USA,NJ,Northeast USA Raw Push Pull,2085
+APA,2017-07-08,USA,AR,Southern States,2089
+APA,2016-04-16,USA,OR,Elite Spring Challenge District 7 Regionals,2094
+APA,2005-10-29,USA,FL,Sunshine State Open,2145
+APA,2019-01-19,USA,MO,American Iron Championships,2146
+APA,2017-09-23,USA,UT,West Coast Raw Championships,2147
+APA,2018-09-15,USA,MO,Central USA Raw Championships,2150
+APA,2016-02-06,USA,MI,Central Mississippi Open,2151
+APA,1998-04-18,USA,GA,Peach State Open,2157
+APA,2009-05-10,USA,DE,Delaware Power Classic,2162
+APA,2009-05-02,USA,VT,World Championships,2163
+APA,2014-04-08,USA,AK,Strength Through Struggle Championships,2173
+APA,2010-11-13,USA,FL,Ironfest,2177
+APA,2014-12-06,USA,OH,Buckeye Raw Winter Classic,2181
+APA,2015-10-10,USA,OR,Fall Classic,2187
+APA,2019-02-16,USA,MO,Mid-West Regional Championships,2202
+APA,1994-05-21,USA,MD,Temple Hills Open Powerlifting Championships,2205
+APA,2009-11-07,USA,DE,First State Power Frenzy,2219
+APA,2013-09-28,USA,OR,Elite Fall Classic,2224
+APA,2017-05-13,USA,VT,30th Can-Am International Championships,2227
+APA,1987-02-14,USA,MA,New England States Open Bench Press Championships,2233
+APA,2017-12-09,USA,AR,Rocky Memorial VIII,2235
+APA,2015-04-18,USA,FL,Raw Nationals,2244
+APA,2017-09-16,USA,MI,4th Annual Wolverine Open Raw Championships,2271
+APA,2012-09-22,USA,OR,Fall Classic,2278
+APA,2017-05-20,USA,FL,Blessed Iron Bash,2283
+APA,2016-04-23,USA,FL,Raw Nationals,2288
+APA,1987-12-13,USA,NH,Northeastern U.S. Bench Press Championships,2418
+APA,2018-12-01,USA,MA,Northeast USA Championships,2420
+APA,2011-07-23,USA,MS,Rock Solid Benchpress and Deadlift Challenge,2443
+APA,2009-02-28,USA,CA,All RAW Northwest Regional Championships,2446
+APA,2008-08-02,USA,TX,Texas Open Championships,2468
+APA,2009-10-03,USA,FL,Tony Conyers Extravaganza,2471
+APA,2012-03-03,USA,IL,Prairie State Open Championships,2480
+APA,1997-06-21,USA,GA,Tri-State Bench Press & Atlantic Coast Deadlift Championships,2481
+APA,1989-03-12,USA,CT,U.S. Bench Press,2484
+APA,2010-04-17,USA,,Raw Nationals,2485
+APA,2017-02-18,USA,AR,Arkansas Raw Championships,2492
+APA,2018-06-16,USA,TX,Lone Star Open,2496
+APA,2019-02-23,USA,AR,Iron Disorder Near the Border,2497
+APA,2008-12-01,USA,WA,Northwest Open,2498
+BVDK,2013-12-21,Germany,,Bembel Man IX,2501
+UkrainePF,1999-09-24,Ukraine,,Ukrainian Powerlifting Cup,2503
+UkrainePF,2013-05-17,Ukraine,,Ukrainian Deadlift Championships,2504
+UkrainePF,2018-03-13,Ukraine,,Ukrainian Classic Powerlifting Championships,2506
+UkrainePF,2000-02-24,Ukraine,,Ukrainian Powerlifting Championships,2509
+UkrainePF,1994-05-23,Ukraine,,Azov Sea Cup,2511
+UkrainePF,2001-04-14,Ukraine,,Crimean Powerlifting Championships,2516
+UkrainePF,2016-02-13,Ukraine,,Ukrainian Powerlifting Championship,2517
+UkrainePF,1997-10-30,Ukraine,,Ukrainian Sub-Junior Powerlifting Championships,2518
+UkrainePF,1993-02-18,Ukraine,,Ukrainian Powerlifting Championships,2519
+UkrainePF,2010-02-20,Ukraine,,Ukrainian Powerlifting Championships,2520
+UkrainePF,2008-04-16,Ukraine,,Ukrainian Bench Press Championships,2522
+UkrainePF,2013-12-07,Ukraine,,Ukrainian Schools Powerlifting Championship,2524
+UkrainePF,1998-03-14,Ukraine,,Crimean Powerlifting Championships,2525
+UkrainePF,1995-10-09,Ukraine,,Ukrainian Powerlifting Cup,2527
+UkrainePF,1991-12-19,Ukraine,,Crimean Powerlifting Championships,2529
+UkrainePF,2007-02-19,Ukraine,,Ukrainian Powerlifting Championships,2531
+UkrainePF,2014-02-03,Ukraine,,Ukrainian Juniors Powerlifting Championship,2532
+UkrainePF,2000-04-06,Ukraine,,Ukrainian Junior Powerlifting Championships,2533
+UkrainePF,2011-03-18,Ukraine,,Ukranian Bench Press Championships,2534
+UkrainePF,1992-10-29,Ukraine,,Ukrainian Sub-Junior Championships,2536
+UkrainePF,2015-02-23,Ukraine,,Ukrainian Masters Powerlifting & Bench Press Championship,2539
+UkrainePF,1996-05-03,Ukraine,,Ukrainian Junior Powerlifting Championships,2540
+UkrainePF,2014-03-14,Ukraine,,Ukrainian Bench Press Championship,2541
+UkrainePF,2008-12-04,Ukraine,,Ukrainian Powerlifting Cup,2542
+UkrainePF,2012-02-27,Ukraine,,Ukrainian Masters Powerlifting and Bench Press Championships,2544
+UkrainePF,2012-05-15,Ukraine,,Ukrainian Classic Powerlifting Cup,2545
+UkrainePF,2001-03-13,Ukraine,,Ukrainian Paralympic Championship,2546
+UkrainePF,2011-12-07,Ukraine,,Ukrainian Powerlifting Cup,2548
+UkrainePF,2011-02-23,Ukraine,,Ukrainian Open Powerlifting Championship,2549
+UkrainePF,2011-09-16,Ukraine,,VOSPORO Open Cup,2550
+UkrainePF,1991-05-17,Ukraine,,Azov Sea Cup,2555
+UkrainePF,2015-03-16,Ukraine,,Ukrainian Classic Bench Press Championship,2561
+UkrainePF,1993-04-11,Ukraine,,Ukrainian Junior Powerlifting Championships,2562
+UkrainePF,1999-02-24,Ukraine,,Ukrainian Powerlifting Championships,2564
+UkrainePF,2006-04-06,Ukraine,,Ukrainian Masters Powerlifting Championships,2567
+UkrainePF,2014-09-14,Ukraine,,Ukrainian Classic Powerlifting Championships,2569
+UkrainePF,2016-11-30,Ukraine,,Ukrainian Students Classic Powerlifting Championship,2570
+UkrainePF,1999-05-22,Ukraine,,Crimean Powerlifting Championships,2571
+UkrainePF,2009-04-05,Ukraine,,Ukrainian Masters Powerlifting Championships,2573
+UkrainePF,1998-10-01,Ukraine,,Ukrainian Powerlifting Cup,2574
+UkrainePF,2004-04-02,Ukraine,,Ukrainian Sub-Junior Powerlifting Championships,2576
+UkrainePF,1991-08-22,Ukraine,,Ukrainian Powerlifting Cup,2577
+UkrainePF,1992-04-28,Ukraine,,Ukrainian Masters Powerlifting Championships,2578
+UkrainePF,2000-05-13,Ukraine,,Crimean Powerlifting Championships,2579
+UkrainePF,1999-06-27,Ukraine,,Ukrainian DeadLift Championship,2584
+UkrainePF,1997-04-03,Ukraine,,Ukrainian Junior Powerlifting Championships,2588
+UkrainePF,1999-12-04,Ukraine,,Crimean Powerlifting Cup,2589
+UkrainePF,1995-01-21,Ukraine,,Crimean Powerlifting Championships,2590
+UkrainePF,1999-06-26,Ukraine,,Ukrainian Bench Press Championships,2591
+UkrainePF,2007-11-06,Ukraine,,Ukrainian Powerlifting Cup,2594
+UkrainePF,1992-10-03,Ukraine,,Ukrainian Powerlifting Cup,2595
+UkrainePF,1999-04-14,Ukraine,,Ukrainian Masters Powerlifting Championships,2596
+UkrainePF,2007-04-17,Ukraine,,Ukrainian Junior Powerlifting Championships,2597
+UkrainePF,2010-03-16,Ukraine,,Ukrainian Bench Press Championships,2598
+UkrainePF,2014-11-23,Ukraine,,Ukrainian Schools Powerlifting Championship,2599
+UkrainePF,1997-03-15,Ukraine,,Crimean Powerlifting Championships,2600
+UkrainePF,2016-02-14,Ukraine,,Ukrainian Bench Press Championship,2602
+UkrainePF,1998-02-26,Ukraine,,Ukrainian Powerlifting Championships,2603
+UkrainePF,2009-04-04,Ukraine,,Ukrainian Masters Bench Press Championships,2604
+UkrainePF,1992-05-23,Ukraine,,Azov Sea Cup,2605
+UkrainePF,2004-04-01,Ukraine,,Ukrainian Masters Powerlifting Championships,2612
+UkrainePF,2014-09-18,Ukraine,,Ukrainian Classic Bench Press Championship,2613
+UkrainePF,2006-04-13,Ukraine,,Ukrainian Junior Powerlifting Championships,2614
+UkrainePF,2011-03-30,Ukraine,,Ukrainian Sub-Junior Powerlifting Championships,2615
+UkrainePF,2009-04-07,Ukraine,,Ukrainian Sub-Junior Powerlifting Championships,2616
+UkrainePF,2013-12-03,Ukraine,,Ukrainian Powerlifting Cup,2617
+UkrainePF,2001-05-19,Ukraine,,Ukrainian Masters Powerlifting Championships,2618
+UkrainePF,1994-04-11,Ukraine,,Ukrainian Junior Powerlifting Championships,2619
+UkrainePF,2015-11-28,Ukraine,,Ukrainian Classic Powerlifting Cup,2622
+UkrainePF,1992-03-14,Ukraine,,Ukrainian Junior Championships,2624
+UkrainePF,2013-03-12,Ukraine,,Ukrainian Bench Press Championships,2625
+UkrainePF,2016-02-16,Ukraine,,Ukrainian Classic Bench Press Championship,2627
+UkrainePF,2011-12-07,Ukraine,,Ukrainian Schools Powerlifting Championships,2629
+UkrainePF,2008-02-18,Ukraine,,Ukrainian Powerlifting Championships,2630
+UkrainePF,1995-04-06,Ukraine,,Ukrainian Junior Powerlifting Championships,2631
+UkrainePF,1991-03-21,Ukraine,,Crimean Powerlifting Championships,2632
+UkrainePF,1999-04-15,Ukraine,,Ukrainian Junior Powerlifting Championships,2634
+UkrainePF,2012-11-24,Ukraine,,Ukrainian School Powerlifting Championships,2635
+UkrainePF,1999-10-26,Ukraine,,Ukrainian Sub-Junior Powerlifting Championships,2636
+UkrainePF,2009-03-12,Ukraine,,Ukrainian Bench Press Championships,2639
+UkrainePF,2010-09-18,Ukraine,,VOSPORO Open Cup,2641
+UkrainePF,2010-12-07,Ukraine,,Ukrainian Powerlifting Cup,2647
+UkrainePF,2003-02-26,Ukraine,,Ukrainian Powerlifting Championships,2648
+UkrainePF,1996-11-03,Ukraine,,Ukrainian Sub-Junior Powerlifting Championships,2649
+UkrainePF,2001-12-15,Ukraine,,Ukrainian University Powerlifting Championship,2650
+UkrainePF,1996-05-29,Ukraine,,Crimean Powerlifting Championships,2652
+UkrainePF,2012-11-20,Ukraine,,Ukrainian Powerlifting Cup,2654
+UkrainePF,2007-05-15,Ukraine,,All Ukrainian Sport Games,2655
+UkrainePF,1989-01-14,Ukraine,,Ukrainian Powerlifting Championships,2656
+UkrainePF,2013-09-06,Ukraine,,Vosporo International Cup,2657
+UkrainePF,2000-12-16,Ukraine,,Ukrainian University Powerlifting Championship,2664
+UkrainePF,2012-03-13,Ukraine,,Ukrainian Bench Press Championships,2665
+UkrainePF,2010-10-08,Ukraine,,Youth Tournament,2667
+UkrainePF,2000-06-25,Ukraine,,Ukrainian DeadLift Championship,2668
+UkrainePF,2007-04-29,Ukraine,,Ukrainian Masters Powerlifting Championships,2669
+UkrainePF,1995-05-23,Ukraine,,Azov Sea Cup,2670
+UkrainePA,2013-10-19,Ukraine,,1st Ukrainian Open Cup South Palmyra,2671
+UkrainePA,2013-04-13,Ukraine,,BP Championships,2673
+UkrainePA,2015-02-28,Ukraine,,Ukrainian Central Region Championships,2677
+WPF,2013-06-21,Austria,,European Championships,2678
+WPF,2009-06-26,Netherlands,,European Championships,2718
+WRPF-KAZ,2018-09-15,Kazakhstan,,Kazakhstan Championships,2727
+WRPF-POL,2016-11-05,Poland,,Polish Bench Press Championships,2734
+WDFPF,1998-08-22,USA,,World Powerlifting Championships,2735
+IPF,1993-12-12,Hungary,,World Bench Press Championships,2736
+IPF,1993-07-24,Netherlands,,World Games,2744
+IPF,1991-11-14,Sweden,,Men's World Powerlifting Championships,2745
+EPF,1993-06-05,Germany,,Women's European Championships,2746
+WPC,1997-11-06,England,,World Championships,2755
+IPF,1991-12-15,Germany,,World Bench Press Championships,2764
+IPF,1992-11-19,England,,World Men's Powerlifting Championship,2766
+WDFPF,1997-10-10,England,,World Powerlifting Championships,2769
+EPF,1990-09-29,Russia,,Baltic Cup,2770
+IPF,1993-11-27,Sweden,,World Powerlifting Championships,2780
+IPF,1994-11-17,South Africa,,Men's World Powerlifting Championships,2793
+EPF,1991-09-28,Poland,,Baltic Cup,2798
+IPF,1995-11-15,Finland,,Men's World Powerlifting Championships,2803
+EPF,1994-09-03,England,,European Juniors Powerlifting Championships,2810
+EPF,1992-07-05,Slovakia,,European Masters Powerlifting Championships,2819
+WPA,1996-03-16,Canada,QC,World Championships,2829
+WPC,1996-11-07,South Africa,,Worlds,2831
+EPF,1991-11-21,Norway,,Women's European Powerlifting Championships,2836
+WPC,1998-11-02,Austria,,World Championships,2842
+FPR,1992-02-28,Russia,,Russian Championships,2848
+WDFPF,1993-10-09,Canada,BC,World Championships,2849
+WDFPF,1994-09-17,USA,,World Powerlifting Championships,2851
+EPF,1992-06-14,Hungary,,European Juniors Powerlifting Championships,2857
+WPC,1995-10-26,USA,OH,Worlds,2868
+EPF,1992-11-29,Sweden,,Women's European Powerlifting Championships,2872
+FPR,1991-02-28,Russia,,USSR Championships,2884
+EPF,1994-09-18,Hungary,,Women's European Powerlifting Championships,2910
+EPF,1995-07-06,Spain,,European Masters Powerlifting Championships,2919
+EPF,1993-06-10,Belgium,,European Juniors Powerlifting Championships,2938
+WRPF-Iceland,2018-12-15,Iceland,,Thor's Powerlifting Challenge,2949
+RAW-UKR,2013-12-07,Ukraine,,Ukrainian Championships,2951
+RAW-UKR,2010-10-09,Ukraine,,Raw BP & DL Championships,2962
+WPU,2013-11-14,Netherlands,,World Powerlifting Championship,2963
+WPU,2014-06-26,Ireland,,World Championships,2970
+SPF,2011-03-05,USA,,Ironman Classic,2971
+USAPL,2011-03-04,USA,OH,Raw Challenge,2972
+UkrainePO,2007-04-13,Ukraine,,Teens Junior & Masters Championships,2973
+UkrainePO,2014-02-14,Ukraine,,Ukrainian Championships,2975
+UkrainePO,2008-02-15,Ukraine,,Open Championships,2977
+UkrainePO,2007-09-13,Ukraine,,Powerlifting Cup,2978
+RPU,2018-06-22,Russia,,Russian Championship,2980
+RPU,2018-09-23,Russia,,Okskie Bogatyrs V,3089
+IPL,2017-03-05,Russia,,Klin Open Cup,3101
+IPL,2016-04-21,Russia,,European Powerlifting Championships,3106
+GPC-AUS,2018-10-27,Australia,VIC,Melbourne Cup,3501
+GPC-AUS,2018-08-25,Australia,QLD,Sunshine Coast Open,3752
+GPC-AUS,2013-04-28,Australia,VIC,Victoria Qualifier,3754
+GPC-AUS,2018-01-21,Australia,QLD,Gold Coast Nationals Qualifier,3763
+GPC-AUS,2018-02-18,Australia,SA,SA Early Qualifier,3769
+GPC-AUS,2015-11-01,Australia,QLD,November Qualifier,3771
+GPC-AUS,2019-02-17,Australia,NSW,NSW State Titles,3781
+GPC-AUS,2014-03-16,Australia,ACT,ACT State Titles,3793
+GPC-AUS,2018-11-18,Australia,NSW,Sydney Cup,3803
+GPC-AUS,2016-04-10,Australia,SA,SA State Championship,3817
+GPC-AUS,2019-03-24,Australia,ACT,ACT States,3821
+GPC-AUS,2017-09-09,Australia,VIC,Melbourne Cup,3825
+GPC-AUS,2014-05-04,Australia,QLD,Gold Coast Nationals Qualifier,3848
+GPC-AUS,2019-03-31,Australia,SA,SA Last Chance,3858
+GPC-AUS,2016-12-04,Australia,,Tri-Nations Push/Pull,3860
+GPC-AUS,2013-08-04,Australia,VIC,Victoria Big Bench,4049
+GPC-AUS,2014-10-05,Australia,ACT,Canberra Cup,4066
+GPC-AUS,2018-12-02,Australia,VIC,VIC Push Pull,4069
+GPC-AUS,2015-12-06,Australia,,International Push/Pull,4073
+GPC-AUS,2018-03-08,Australia,NSW,NSW States,4125
+GPC-AUS,2017-10-22,Australia,SA,Adelaide Cup,4140
+GPC-AUS,2018-06-01,Australia,VIC,Nationals,4143
+GPC-AUS,2013-03-10,Australia,NSW,NSW State Titles,4210
+GPC-AUS,2019-03-02,Australia,WA,WA State Powerlifting Championships,4216
+GPC-AUS,2015-01-25,Australia,NT,NT State Titles,4234
+GPC-AUS,2018-03-04,Australia,QLD,Mackay Qualifier,4239
+GPC-AUS,2019-03-03,Australia,SA,SA State Titles,4253
+GPC-AUS,2017-02-24,Australia,SA,SA Summer Qualifier,4274
+GPC-AUS,2016-03-13,Australia,ACT,ACT State Championship,4281
+GPC-AUS,2016-06-05,Australia,VIC,Winter Cup,4291
+GPC-AUS,2017-10-22,Australia,NSW,Sydney Cup,4298
+GPC-AUS,2018-10-20,Australia,WA,TJMES Nationals,4314
+GPC-AUS,2015-09-19,Australia,WA,Perth Cup,4339
+GPC-AUS,2014-07-12,Australia,,Push/Pull,4351
+GPC-AUS,2018-03-04,Australia,ACT,ACT States,4395
+GPC-AUS,2016-04-03,Australia,VIC,VIC States,4401
+GPC-AUS,2018-09-23,Australia,QLD,Mackay Cup,4440
+GPC-AUS,2015-10-11,Australia,ACT,Canberra Cup,4445
+GPC-AUS,2018-12-08,Australia,QLD,Sunshine Coast Summer Classic,4459
+GPC-AUS,2014-03-15,Australia,WA,WA Powerlifting State Titles,4467
+GPC-AUS,2017-12-03,Australia,,Tri-Nations Push/Pull,4483
+GPC-AUS,2012-11-23,Australia,,National Push Pull,4503
+GPC-AUS,2014-01-01,Australia,QLD,QLD State Titles,4506
+GPC-AUS,2016-07-08,Australia,QLD,Nationals,4507
+APF,1987-11-21,USA,OH,World Championships,4578
+IPF,1985-08-03,England,,World Games,4584
+IPA,1998-10-30,USA,MD,Senior Nationals,4597
+WPC,1994-11-03,USA,OH,World Championships,4598
+ADFPA,1993-11-13,USA,CA,Masters Nationals,4601
+APA,1994-09-04,USA,MD,Temple Hills Open,4603
+IPF,1989-11-13,Canada,NS,World Powerlifting Championships,4604
+APF,1991-08-04,USA,OH,Columbus Bench Press Extravaganza,4622
+WNPF,1998-11-06,USA,PA,Worlds,4623
+WABDL,2006-05-20,USA,AZ,GLC Push Pull Nationals,4624
+USPF,1985-12-14,USA,CO,Rocky Mountain Championships,4625
+USPF,1980-10-24,USA,CA,World Masters Championships,4626
+AAU,1998-11-22,USA,CA,World Bench Press,4627
+WPA,1994-03-25,Canada,QC,Worlds,4630
+WPA,1993-03-27,USA,PA,World Record Breakers & Submaster/Master Worlds,4676
+USPF,1990-04-21,USA,TX,High School Nationals,4680
+AAU,1996-06-30,USA,VA,Virginia State Games,4682
+USPF,1982-01-09,USA,OH,National YMCA Championships,4684
+AIWBPA,1992-11-08,Indonesia,,Indonesian Nationals,4685
+IPA,1997-11-21,USA,DC,Senior Nationals,4686
+USPF,1983-03-25,USA,TX,Collegiate Nationals,4689
+USPF,1995-12-10,USA,HI,Góld's Gym Hawaii State,4691
+ADFPA,1989-02-25,USA,AZ,Lifetime Drug Free Nationals,4692
+USPF,1983-10-22,USA,FL,Southern States Championships,4693
+USPF,1981-12-20,USA,OH,Lake Erie Open,4694
+NASA,1994-01-08,USA,OK,National Bench Press,4695
+USPF,1985-03-02,USA,AR,Greater Mr. Arkansas,4699
+USPF,1991-07-06,USA,PA,Senior Nationals,4700
+USPF,1993-10-09,USA,OK,Crain's Muscle World Open,4701
+ADFPA,1989-04-01,USA,WA,Northwest Regional,4702
+WPC,1993-10-21,France,,World Championships,4703
+WNPF,1995-07-09,USA,GA,Teen/Junior/Submaster/Master National Championships,4704
+WDFPF,1997-08-23,Canada,,Teen/Junior/Masters Worlds,4707
+NASA,1993-06-05,USA,TN,Submaster/Master Nationals,4722
+IPA,2003-11-14,USA,PA,Senior Nationals,4724
+USPF,1981-11-21,USA,IN,Annual Purdue Open,4726
+AAU,1997-08-22,USA,FL,Annual PL Championships,4727
+USMilAbroad,1984-09-08,Japan,,Far East Championships,4728
+WABDL,1997-11-29,USA,OR,Miller Lite World BP/DL,4729
+WNPF,1995-11-03,USA,PA,Lifetime Drug Free International Cup,4774
+USPF,1998-02-20,USA,PA,Junior Nationals,4788
+USPF,1980-11-16,USA,OR,Record Breaker's Meet,4789
+PA,1995-09-23,Australia,QLD,Rockhampton Open Championships,4790
+WABDL,2003-12-09,USA,NV,World Championships,4791
+WPC,1996-08-10,USA,NV,Can-Am World Cup,4802
+USPF,1983-08-21,USA,OH,Black's Health World Open Bench,4807
+APF,1998-02-15,USA,OH,Buckeye Power Day,4808
+USPF,1982-12-10,USA,NC,Western NC Open,4809
+USPF,1996-05-02,USA,OR,National Bench Press,4810
+APF,1997-11-30,USA,OH,Eastern Ohio BP/DL,4812
+ADFPA,1992-11-07,USA,MO,Masters Nationals,4813
+AAU,1998-06-11,USA,CA,Raw Nationals,4814
+USPF,1982-02-27,USA,OK,Oklahoma State Championships,4819
+PA,1995-05-27,Australia,QLD,Queensland State Open & Bench Press,4820
+USPF,1985-12-14,USA,TX,Annual Texas Powerlift Classic,4821
+WDFPF,1990-06-30,France,,World Championships,4822
+USPF,1988-12-10,USA,TX,Greater Texas Open,4825
+THSPA,1990-03-31,USA,TX,Texas High School Championships,4826
+IPA,1998-06-26,USA,PA,World Cup,4827
+WABDL,1998-11-13,USA,OR,24 Hour Fitness World Bench Press and Deadlift,4832
+USPF,1980-05-17,USA,OH,North Americans,4846
+USPF,1986-04-12,USA,TX,MSSA Spring Nationals,4851
+ADFPA,1994-07-16,USA,IL,Men's Nationals,4860
+USPF,1996-05-11,USA,FL,Barbender II Bench Press,4861
+APF,1999-08-08,USA,ME,Maine State Push-Pull & Bench Bash for Cash,4862
+PA,1995-01-01,Australia,,Australian Bench Press Championships,4863
+PA,1994-10-15,Australia,QLD,Northwest Queensland Open Championships,4864
+PA,1997-05-04,Australia,QLD,QLD State Powerlifting & Bench Press Titles,4865
+PA,1997-07-01,Australia,,Australian Bench Press Nationals,4867
+USPF,1987-04-18,USA,OH,Mid Ohio Valley Open BP-DL,4871
+USPF,1988-02-13,USA,TX,Natural Nationals,4872
+USPF,1980-01-12,USA,TX,Duncanville Class III Meet,4873
+AAU,1972-11-10,USA,PA,Men's World Powerlifting Championships,4874
+USPF,1979-11-10,USA,OR,Deadlift Meet,4876
+WPC,1998-09-25,USA,NV,Amateur World Championships,4882
+AAU,1998-08-29,USA,CA,North American Powerlifting/BP,4885
+USPF,1982-02-07,USA,OH,Muskingum Valley Open,4887
+AusPF,1993-11-28,Australia,WA,Novice Open Championships,4888
+USPF,1989-12-09,USA,MS,Holiday in Dixie,4889
+USPF,1984-12-01,USA,TX,Greater Texas Classic,4890
+WNPF,1996-03-24,USA,PA,Elite Nationals,4891
+USPF,1980-08-09,USA,IL,Teenage Nationals,4894
+USPF,1989-04-15,USA,TX,High School Nationals,4895
+USPF,1983-12-17,USA,OH,YMCA Nationals,4896
+ADFPA,1990-03-23,USA,MS,Mississippi Teenage,4897
+WNPF,1994-11-03,USA,PA,International Cup,4898
+WDFPF,1992-09-26,UK,,World Championships,4904
+WDFPF,1992-07-18,England,,Masters Worlds,4909
+PA,1995-12-02,Australia,QLD,Mount Isa Championships,4911
+USPF,1988-05-28,USA,MO,Kansas City Natural Novice,4912
+APF,2004-06-05,USA,LA,Senior Nationals,4913
+PA,1996-05-05,Australia,QLD,Queensland Championships,4914
+USPF,1995-05-06,USA,OR,Pepsi Region 8,4915
+NASA,1991-01-19,USA,OK,Natural National Bench Press,4965
+NZPF,1988-10-01,New Zealand,NTL,New Zealand Championships,4966
+NASA,1992-05-16,USA,TX,Masters Nationals,4967
+USPF,1997-03-29,USA,MS,Mississippi State,4972
+CPU,1979-12-08,Canada,ON,London Intermediate Championships,4974
+WABDL,1999-06-19,USA,TX,24 Hour Fitness National BP/DL,4976
+USPF,1979-12-08,USA,ND,3rd Annual Midwestern Bench Press Championships,4977
+NASA,1993-04-30,USA,TX,High School Nationals,4992
+PA,1994-04-23,Australia,QLD,Open Championships,4993
+USPF,1995-05-19,USA,WA,Masters Nationals,4994
