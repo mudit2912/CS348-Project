@@ -21,7 +21,9 @@ If you were to execute these queries manually, you would first run Person.sql an
 #### Loading Production Data into the DB
 As mentioned in the previous subsection, we consolidated the files created by our scripts into the db-setup.sql file, which is loaded into the MySQL server by Docker (db-setup file is located in ./C5/backend/db-setup.sql).
 
-However, the lifts are too large to be run by the db-setup.sql file. ###These must be loaded manually.### To do so, start the application (following the instructions in the 'Starting the Application' section below).
+However, the lifts are too large to be run by the db-setup.sql file.
+<code><b>!!! These must be loaded manually !!!</b></code>
+To do so, start the application (following the instructions in the 'Starting the Application' section below).
 
 Open http://localhost:8080 (MySQL Admin service), with the following credentials:
 ```
