@@ -16,11 +16,12 @@ GET Wrapped Calls
 */
 export async function getRowsSample() {
   const resp = await fetch('http://localhost:5050/api/get/sample', {
-    method: 'GET', credentials: 'include'
+    method: 'GET',
+    credentials: 'include',
   });
   const resultjson = await resp.json();
   return resultjson;
-};
+}
 
 /*
 
@@ -41,7 +42,8 @@ export async function getAuthStatus() {
   //console.log("GETTING AUTH STATUS");
 
   const resp = await fetch('http://localhost:5050/api/auth/status', {
-    method: 'GET', credentials: 'include'
+    method: 'GET',
+    credentials: 'include',
   });
   const resultjson = await resp.json();
   return resultjson['auth'];
@@ -49,26 +51,46 @@ export async function getAuthStatus() {
 
 export async function loginUser(username, password) {
   const resp = await fetch('http://localhost:5050/api/auth/login', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({username: username, password: password})
+    body: JSON.stringify({ username: username, password: password }),
   });
   const resultjson = await resp.json();
-  return ({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
 }
 
-export async function createUser(name, surname, gender, birth_month, birth_day, birth_year, email, username, password) {
+export async function createUser(
+  name,
+  surname,
+  gender,
+  birth_month,
+  birth_day,
+  birth_year,
+  email,
+  username,
+  password
+) {
   const resp = await fetch('http://localhost:5050/api/auth/signup', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({first_name: name, last_name: surname, gender: gender, date_of_birth: `${birth_year}-${birth_month}-${birth_day}`, email: email, username: username, password: password})
+    body: JSON.stringify({
+      first_name: name,
+      last_name: surname,
+      gender: gender,
+      date_of_birth: `${birth_year}-${birth_month}-${birth_day}`,
+      email: email,
+      username: username,
+      password: password,
+    }),
   });
   const resultjson = await resp.json();
-  return ({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
 }
 
 // --------------------
@@ -77,16 +99,15 @@ export async function createUser(name, surname, gender, birth_month, birth_day, 
 
 export async function getHomeFeed(username) {
   const resp = await fetch('http://localhost:5050/api/home/getfeed', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   });
   const resultjson = await resp.json();
-  return({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
 }
-
-
 
 // --------------------
 //      PROFILES
@@ -94,14 +115,15 @@ export async function getHomeFeed(username) {
 
 export async function getProfileInfo(username) {
   const resp = await fetch('http://localhost:5050/api/user/info', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({username: username})
+    body: JSON.stringify({ username: username }),
   });
   const resultjson = await resp.json();
-  return({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
 }
 
 // --------------------
@@ -110,14 +132,15 @@ export async function getProfileInfo(username) {
 
 export async function getHeadToHeadComparison(a, b) {
   const resp = await fetch('http://localhost:5050/api/h2h/compare', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({liftera: a, lifterb: b})
+    body: JSON.stringify({ liftera: a, lifterb: b }),
   });
   const resultjson = await resp.json();
-  return({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
 }
 
 // --------------------
@@ -126,24 +149,39 @@ export async function getHeadToHeadComparison(a, b) {
 
 export async function getGlobalLeaderboard(limit) {
   const resp = await fetch('http://localhost:5050/api/toplifts/global', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({limit: limit})
+    body: JSON.stringify({ limit: limit }),
   });
   const resultjson = await resp.json();
-  return({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
 }
 
 export async function getNationalLeaderboard(limit, country) {
   const resp = await fetch('http://localhost:5050/api/toplifts/national', {
-    method: 'POST', credentials: 'include',
+    method: 'POST',
+    credentials: 'include',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({limit: limit, country: country})
+    body: JSON.stringify({ limit: limit, country: country }),
   });
   const resultjson = await resp.json();
-  return({status: resp.status, data: resultjson});
+  return { status: resp.status, data: resultjson };
+}
+
+export async function getUsers(username) {
+  const resp = await fetch('http://localhost:5050/api/users', {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username }),
+  });
+  const resultjson = await resp.json();
+  return { status: resp.status, data: resultjson };
 }
