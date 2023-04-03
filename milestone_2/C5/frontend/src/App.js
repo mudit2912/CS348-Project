@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate, Outlet } from "react-
 // View Controllers
 import { Home, Login, SignUp, ViewProfile, HeadToHead, GlobalLeaderboard, NationalLeaderboard, AdminLifts, AdminLiftsNew } from "./components";
 
-
-
 // API Calls
 import { getAuthStatus } from "./apicalls/WrappedCalls";
 
@@ -73,6 +71,7 @@ function App() {
           <Route path="/leaderboard/national" element={<NationalLeaderboard />} />
           <Route path="/admin/lifts" element={<AdminLifts/>}/>
           <Route path="/admin/lifts/new" element={<AdminLiftsNew/>}/>
+          <Route path="/search" element={<Search />} />
         </Route>
       </Routes>
     </Router>
