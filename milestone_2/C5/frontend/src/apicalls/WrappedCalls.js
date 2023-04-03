@@ -147,3 +147,21 @@ export async function getNationalLeaderboard(limit, country) {
   const resultjson = await resp.json();
   return({status: resp.status, data: resultjson});
 }
+
+// --------------------
+//        ADMIN
+// --------------------
+export async function createLift(powerlifter_id, meet_id, bench1kg, bench2kg, bench3kg, best3benchkg,
+   squat1kg, squat2kg, squat3kg, best3squatkg, deadlift1kg, deadlift2kg, deadlift3kg, best3deadliftkg, totalkg, mccullough, wilks, glossbrenner, ipfpPoints) {
+    const resp = await fetch('http://localhost:5050/api/admin/lifts/new', {
+      method: 'POST', credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({powerlifter_id: powerlifter_id, meet_id: meet_id, bench1kg: bench1kg, bench2kg: bench2kg, bench3kg: best3benchkg, best3benchkg: best3benchkg,
+                            squat1kg: squat1kg, squat2kg: squat2kg, squat3kg:squat3kg, best3squatkg:best3squatkg, deadlift1kg:deadlift1kg, deadlift2kg:deadlift2kg,
+                          deadlift3kg:deadlift3kg, best3deadliftkg:best3deadliftkg, totalkg: totalkg, mccullough: mccullough, wilks: wilks, glossbrenner:glossbrenner, ipfpPoints: ipfpPoints})
+    });
+    const resultjson = await resp.json();
+    return ({status: resp.status, data: resultjson});
+   }
