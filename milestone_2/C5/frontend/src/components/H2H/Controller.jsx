@@ -15,6 +15,17 @@ function HeadToHead(props) {
     const [lifterData_A, setLifterData_A] = useState(null);
     const [lifterData_B, setLifterData_B] = useState(null);
 
+    // Function to convert SQL date time 
+    function formatDate(sqlDateTime) {
+        const date = new Date(sqlDateTime);
+        const monthNames = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+        const month = monthNames[date.getMonth()];
+        const day = date.getDate();
+        const year = date.getFullYear();
+        return `${month} ${day}, ${year}`;
+    }
+    
+    // Load comparison for head to head
     async function loadComparison() {
         const response = await getHeadToHeadComparison(lifterA, lifterB);
         if (response.status !== 200) {
@@ -39,6 +50,7 @@ function HeadToHead(props) {
         setShowingPage(1);
     }
 
+    // Handle compare
     function handleCompare(event) {
         event.preventDefault();
         if (lifterA.length === 0 || lifterB.length === 0) {
@@ -51,12 +63,13 @@ function HeadToHead(props) {
     function renderLifts(lifterData) {
         var r = [];
         lifterData.forEach(x => {
+            if (x.best3benchkg === null) return;
             r.push(
                 <div className="home feed post h2h-bubble">
                     <div className="h2h-top">
                         <h2>{x.meet_country}</h2>
                         <h1>{x.meet_name}</h1>
-                        <h2>{x.meet_date}</h2>
+                        <h2>{formatDate(x.meet_date)}</h2>
                     </div>
                     <div className="bottom">
                         <div className="lifts">
@@ -97,13 +110,12 @@ function HeadToHead(props) {
     }
 
     return (
-        <div className="h2h cont">
+        <div className={"h2h cont" + ((showingPage === 1) ? " in" : "")}>
             {(showingPage === 0) && 
             <form className="auth form" onSubmit={handleCompare}>
                 <h1 className="auth title">Head to Head</h1>
-                <h2 className="h2h form subheader">Lifter #1</h2>
                 <input className="auth input" type="text" placeholder="Username" value={lifterA || ""} onChange={(event) => setLifterA(event.target.value)} />
-                <h2 className="h2h form subheader">Lifter #2</h2>
+                <h2 className="h2h form subheader">VS</h2>
                 <input className="auth input last" type="text" placeholder="Username" value={lifterB || ""} onChange={(event) => setLifterB(event.target.value)} />
                 <br />
                 <button className="auth" type="submit">Compare</button>
@@ -116,13 +128,13 @@ function HeadToHead(props) {
                         <div>
                             <img src={lifterUser_A.pfp_url} />
                             <h1>{lifterUser_A.username}</h1>
-                            <h3>{lifterUser_A.bio}</h3>
+                            <h3 className="h2h bio">{lifterUser_A.bio}</h3>
                             { renderLifts(lifterData_A) }
                         </div>
                         <div>
                             <img src={lifterUser_B.pfp_url} />
                             <h1>{lifterUser_B.username}</h1>
-                            <h3>{lifterUser_B.bio}</h3>
+                            <h3 className="h2h bio">{lifterUser_B.bio}</h3>
                             { renderLifts(lifterData_B) }
                         </div>
                     </div>

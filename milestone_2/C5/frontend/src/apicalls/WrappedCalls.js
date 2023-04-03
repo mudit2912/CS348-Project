@@ -46,7 +46,7 @@ export async function getAuthStatus() {
     credentials: 'include',
   });
   const resultjson = await resp.json();
-  return resultjson['auth'];
+  return resultjson;
 }
 
 export async function loginUser(username, password) {
