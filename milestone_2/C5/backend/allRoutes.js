@@ -52,7 +52,7 @@ function verifyAuth(req, res, next) {
 /* Auth Requests */
 
 router.get('/auth/status', verifyAuth, (req, res) => {
-  return res.json({ auth: true });
+  return res.json({ auth: true, username: req.user.username });
 });
 
 router.post(
