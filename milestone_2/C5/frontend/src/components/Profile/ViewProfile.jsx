@@ -40,24 +40,16 @@ function ProfileView(props) {
                 <h1 className="profile subtext">Loading User...</h1>
             }
             {(profileLoaded === 1) &&
-                <div className="profile info">
-                    <img className="profile image" src={userInfo.pfp_url || default_pfp_url} />
-                    <h1 className="profile username">@{userInfo.username}</h1>
-                    <h3 className="profile bio">{userInfo.bio}</h3>
-                    <button className="profile favorite">Favorite</button>
-                </div>
-            }
-            {(profileLoaded === 1 && showingPage === 0) && 
-                <div>
-                </div>
-            }
-            {(profileLoaded === 1 && showingPage === 1) && 
-                <div>
-                </div>
-            }
-            {(profileLoaded === 1 && showingPage === 2) && 
-                <div>
-                </div>
+                <>
+                    <div className="profile top" />
+                    <div className="profile info">
+                        <img className="profile image" src={userInfo.pfp_url || default_pfp_url} />
+                        <h1 className="profile username">@{userInfo.username}</h1>
+                        <button className="profile favorite">Favorite</button>
+                        <h3 className="profile bio-title">BIOGRAPHY</h3>
+                        <h3 className="profile bio">{userInfo.bio}</h3>
+                    </div>
+                </>
             }
         </div>
     );

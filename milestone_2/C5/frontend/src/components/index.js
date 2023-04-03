@@ -10,7 +10,5 @@ export { default as AdminPage } from "./Admin/AdminPage";
 export { default as AdminLiftsNew } from "./Admin/AdminLiftsNew";
 export { default as AdminMeetNew } from "./Admin/AdminMeetNew";
 export { default as InsertLift} from "./InsertLifts/Insert";
-
-
-// Place new component exports below, if they are used in the Router
-// i.e. If they should be accessed by a URL
+export { default as UpdateProfile } from "./Profile/UpdateProfile";
+export { default as Search } from "./Search/Controller";

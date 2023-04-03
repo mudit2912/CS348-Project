@@ -8,6 +8,16 @@ import { getHomeFeed } from "../../apicalls/WrappedCalls.js";
 function HomeFeed(props) {
   const data = props.data;
 
+  // Function to convert SQL date time 
+  function formatDate(sqlDateTime) {
+    const date = new Date(sqlDateTime);
+    const monthNames = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+    const month = monthNames[date.getMonth()];
+    const day = date.getDate();
+    const year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
+  }
+
   // Function to render feed timeline
   function buildTimeline() {
     var r = [];
@@ -18,13 +28,10 @@ function HomeFeed(props) {
         <div className="home feed post">
           <div className="top">
             <img src={value.pfp_url} />
-            <a href={'/u/'+value.username} target="_blank">
-              {value.username}
-            </a>
+            <a className="post-username" href={'/u/'+value.username} target="_blank">@{value.username}</a>
+            <h2 className="post-place-date">{formatDate(value.date)} @ {value.name}</h2>
           </div>
           <div className="bottom">
-            <h2>{value.date}</h2>
-            <h2>{value.name}</h2>
             <div className="lifts">
               <div>
                 <h3>Bench (kg)</h3>
@@ -60,6 +67,7 @@ function Home(props) {
   // States
   const [feedData, setFeedData] = useState(null);
   const [feedLoaded, setFeedLoaded] = useState(false);
+  const [noFavorites, setNoFavorites] = useState(false);
 
   // Effects
   useEffect(() => {
@@ -67,30 +75,13 @@ function Home(props) {
 
       const response = await getHomeFeed();
       if (response.status !== 200) {
-        alert(response.data.msg);
+        if (response.data.msg === "No favorited lifters / lifts found.") setNoFavorites(true);
+        else alert(response.data.msg);
         return;
       }
 
       setFeedData(response.data);
       setFeedLoaded(true);
-      /*
-      const response = await getUserFeed();
-      if (!response.ok) return;
-      setFeedData(response.data);
-      setFeedLoaded(true);
-      */
-     /*
-      setFeedData({
-        pfps: ["https://images.pexels.com/photos/2729899/pexels-photo-2729899.jpeg"],
-        usernames: ["zack_gym"],
-        names: ["Zack M"],
-        dates: ["Jun 15 2022"],
-        bench: [205],
-        squat: [300],
-        deadlift: [375]
-      })
-      setFeedLoaded(true);
-      */
     }
     loadFeed();
   }, []);
@@ -104,6 +95,13 @@ function Home(props) {
       <button className='auth cont home-button' type="button"> Add Your Lift</button>
     </a>
       { (feedLoaded) && <HomeFeed {...{data: feedData}} /> }
+      { (noFavorites) &&
+        <div className="nofavorites">
+          Favorite a lifter to start your feed!
+          <br/>
+          <a href="/search">Search Lifters</a>
+        </div>
+      }
     </div>
     </>
   );

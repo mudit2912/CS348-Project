@@ -32,6 +32,7 @@ function LeaderboardView(props) {
         if (!limit) return;
         const response = await getNationalLeaderboard(limit, country);
         if (response.status !== 200) setLeadersLoaded(-1);
+        console.log(response);
         setLeadersLoaded(1);
         setLeaderInfo(response.data);
     }
