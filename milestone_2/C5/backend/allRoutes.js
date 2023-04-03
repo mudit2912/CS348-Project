@@ -117,14 +117,15 @@ router.post('/user/info', async function (req, res, next) {
   });
 });
 
-router.put("/api/updateProfile", async function (req, res) {
+router.put("/updateProfile", async function (req, res) {
   const { id, pfp_url, username, bio } = req.body;
 
   dbpool.getConnection((connect_err, conn) => {
     if (connect_err) return res.status(500).json({ msg: "Error connecting to the database." });
 
-    const update_query_str = "UPDATE User SET pfp_url = ?, username = ?, bio = ? WHERE id = ?;";
-    conn.query(update_query_str, [pfp_url, username, bio, id], (update_err, result) => {
+
+    const update_query_str = "UPDATE User SET pfp_url = ?, username = ?, bio = ? WHERE username = ?;";
+    conn.query(update_query_str, [pfp_url, username, bio, req.user.username], (update_err, result) => {
       if (update_err) return res.status(500).json({ msg: "Error updating User profile." });
       return res.status(200).json({ success: true });
     });
