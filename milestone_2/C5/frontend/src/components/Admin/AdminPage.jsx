@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 
 // Functional Componenet
-function AdminLifts() {
+function AdminPage() {
     const [editPowerlifterID, setEditPowerlifterID] = useState("");
     const [editMeetID, setEditMeetID] = useState("");
     const [createLiftId, setCreateLiftId] = useState("");
@@ -33,6 +33,4 @@ function AdminLifts() {
     )
 }
 
-
-
-export default AdminLifts;
+export default AdminPage;
