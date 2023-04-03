@@ -149,6 +149,25 @@ export async function getNationalLeaderboard(limit, country) {
 }
 
 // --------------------
+//        Insert Lift
+// --------------------
+
+export async function addLift(username, meet_id, bench1kg, bench2kg, bench3kg, best3benchkg,
+  squat1kg, squat2kg, squat3kg, best3squatkg, deadlift1kg, deadlift2kg, deadlift3kg, best3deadliftkg, totalkg, mccullough, wilks, glossbrenner, ipfpPoints) {
+   const resp = await fetch('http://localhost:5050/api/insertLift', {
+     method: 'POST', credentials: 'include',
+     headers: {
+       'Content-Type': 'application/json'
+     },
+     body: JSON.stringify({username: username, meet_id: meet_id, bench1kg: bench1kg, bench2kg: bench2kg, bench3kg: best3benchkg, best3benchkg: best3benchkg,
+                           squat1kg: squat1kg, squat2kg: squat2kg, squat3kg:squat3kg, best3squatkg:best3squatkg, deadlift1kg:deadlift1kg, deadlift2kg:deadlift2kg,
+                         deadlift3kg:deadlift3kg, best3deadliftkg:best3deadliftkg, totalkg: totalkg, mccullough: mccullough, wilks: wilks, glosbrenner:glossbrenner, ipfp_points: ipfpPoints})
+   });
+   const resultjson = await resp.json();
+   return ({status: resp.status, data: resultjson});
+  }
+
+// --------------------
 //        ADMIN
 // --------------------
 export async function createLift(powerlifter_id, meet_id, bench1kg, bench2kg, bench3kg, best3benchkg,
@@ -160,7 +179,19 @@ export async function createLift(powerlifter_id, meet_id, bench1kg, bench2kg, be
       },
       body: JSON.stringify({powerlifter_id: powerlifter_id, meet_id: meet_id, bench1kg: bench1kg, bench2kg: bench2kg, bench3kg: best3benchkg, best3benchkg: best3benchkg,
                             squat1kg: squat1kg, squat2kg: squat2kg, squat3kg:squat3kg, best3squatkg:best3squatkg, deadlift1kg:deadlift1kg, deadlift2kg:deadlift2kg,
-                          deadlift3kg:deadlift3kg, best3deadliftkg:best3deadliftkg, totalkg: totalkg, mccullough: mccullough, wilks: wilks, glossbrenner:glossbrenner, ipfpPoints: ipfpPoints})
+                          deadlift3kg:deadlift3kg, best3deadliftkg:best3deadliftkg, totalkg: totalkg, mccullough: mccullough, wilks: wilks, glosbrenner:glossbrenner, ipfp_points: ipfpPoints})
+    });
+    const resultjson = await resp.json();
+    return ({status: resp.status, data: resultjson});
+   }
+
+   export async function createMeet(meet_id, name, date, state, country, federation) {
+    const resp = await fetch('http://localhost:5050/api/admin/meet/new', {
+      method: 'POST', credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({meet_id: meet_id, name: name, date: date, state: state, country: country, federation: federation})
     });
     const resultjson = await resp.json();
     return ({status: resp.status, data: resultjson});

@@ -8,6 +8,7 @@ export { default as NationalLeaderboard } from "./Leaderboard/National";
 export { default as HeadToHead } from "./H2H/Controller";
 export { default as AdminPage } from "./Admin/AdminPage";
 export { default as AdminLiftsNew } from "./Admin/AdminLiftsNew";
+export { default as AdminMeetNew } from "./Admin/AdminMeetNew";
 export { default as InsertLift} from "./InsertLifts/Insert";
 
 

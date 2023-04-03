@@ -100,6 +100,9 @@ function Home(props) {
     <>
     <div className="home cont">
       <h1>Home</h1>
+      <a href="http://localhost:3000/insertlift">
+      <button className='auth cont home-button' type="button"> Add Your Lift</button>
+    </a>
       { (feedLoaded) && <HomeFeed {...{data: feedData}} /> }
     </div>
     </>
