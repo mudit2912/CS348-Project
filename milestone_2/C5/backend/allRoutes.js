@@ -263,6 +263,46 @@ router.post('/users', async function (req, res, next) {
   });
 });
 
+router.post('/admin/lifts/new', async function (req, res, next) {
+  dbpool.getConnection((connect_err, conn) => {
+    if (connect_err) return res.status(500).json({ msg: 'Error connecting to the database.' });
+    const id_query_str = 'Select * from Powerlifter as PL join (Select U.id from User as U Join Person as P on P.id = U.id where P.id = ?) as T on PL.id = T.id;';
+    conn.query(id_query_str, [req.body.powerlifter_id],
+      (id_query_err, id_result, id_fields) => {
+        if (id_query_err) return res.status(500).json({ msg: 'Error querying the Powerlifter table.' });
+        if (id_result.length == 0) return res.status(404).json({ msg: 'User is not a powerlifter' });
+
+        const id_query_str = 'Select * from Meet where meet_id = ?;';
+        conn.query(id_query_str, [req.body.meet_id],
+          (id_query_err, id_result, id_fields) => {
+            if (id_query_err) return res.status(500).json({ msg: 'Error querying Meet table.' });
+            if (id_result.length == 0) return res.status(404).json({ msg: 'Meet does no exist' });
+
+            const query_str = 'INSERT INTO Scores(powerlifter_id, meet_id, wilks, mccullough, glosbrenner, ipfp_points) VALUES(?, ?, ?, ?, ?, ?);';
+            conn.query(query_str, [req.body.powerlifter_id, req.body.meet_id, req.body.wilks, req.body.mccullough, req.body.glosbrenner, req.body.ipfp_points],
+              (query_err, result, fields) => {
+                if (query_err) return res.status(500).json({ msg: 'Error Inserting into Scores table.' });
+
+                const query_str ='INSERT INTO Lifts (powerlifter_id, meet_id, bench1kg, bench2kg, bench3kg, best3benchkg, squat1kg, squat2kg, squat3kg, best3squatkg,deadlift1kg, deadlift2kg, deadlift3kg, best3deadliftkg, totalkg) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
+                conn.query(query_str, [req.body.powerlifter_id, req.body.meet_id, req.body.bench1kg, req.body.bench2kg, req.body.bench3kg, req.body.best3benchkg, req.body.squat1kg, req.body.squat2kg, req.body.squat3kg, req.body.best3squatkg, req.body.deadlift1kg, req.body.deadlift2kg, req.body.deadlift3kg, req.body.best3deadliftkg, req.body.totalkg],
+                  (query_err, result, fields) => {
+                    console.log(query_err)
+                    if (query_err) return res.status(500).json({ msg: 'Error Inserting into Lifts table.' });
+
+                    const query_str ='INSERT INTO Person_Meet_Info (powerlifter_id, meet_id, division, weight_class, place) VALUES(?, ?, ?, ?, ?);';
+                    conn.query(query_str, [req.body.powerlifter_id, req.body.meet_id, req.body.divison, req.body.division, req.body.weight_class, req.body.place],
+                      (query_err, result, fields) => {
+                        if (query_err) return res.status(500).json({ msg: 'Error Inserting into Person_Meet_Info table.' });
+                        return res.status(200).json({success: true});                     
+                      }
+                    );
+                  })
+              });
+          });
+      })
+  })
+})
+
 /* Catch all non-defined requests */
 
 router.get('/*', (req, res) => {

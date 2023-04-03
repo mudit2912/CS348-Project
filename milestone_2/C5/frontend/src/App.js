@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate, Outlet } from "react-router-dom";
 
 // View Controllers
-import { Home, Login, SignUp, ViewProfile, HeadToHead, GlobalLeaderboard, NationalLeaderboard, Search } from "./components";
+import { Home, Login, SignUp, ViewProfile, HeadToHead, GlobalLeaderboard, NationalLeaderboard, AdminLifts, AdminLiftsNew } from "./components";
 
 // API Calls
 import { getAuthStatus } from "./apicalls/WrappedCalls";
@@ -69,6 +69,8 @@ function App() {
           <Route path="/u/:user" element={<ViewProfile />} />
           <Route path="/leaderboard/global" element={<GlobalLeaderboard />} />
           <Route path="/leaderboard/national" element={<NationalLeaderboard />} />
+          <Route path="/admin/lifts" element={<AdminLifts/>}/>
+          <Route path="/admin/lifts/new" element={<AdminLiftsNew/>}/>
           <Route path="/search" element={<Search />} />
         </Route>
       </Routes>
