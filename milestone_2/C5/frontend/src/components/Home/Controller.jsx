@@ -97,10 +97,12 @@ function Home(props) {
 
   // Layout
   return(
+    <>
     <div className="home cont">
       <h1>Home</h1>
       { (feedLoaded) && <HomeFeed {...{data: feedData}} /> }
     </div>
+    </>
   );
 }
 
