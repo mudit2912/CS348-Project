@@ -123,22 +123,66 @@ router.post('/auth/signup', async function (req, res, next) {
 
 /* User Requests */
 
+router.post('/user/favourite/toggle', async function (req, res, next) {
+  dbpool.getConnection((connect_err, conn) => {
+    if (connect_err) return res.status(500).json({msg: 'Error connecting to the database.'});
+    const check_query_str = 'SELECT user_id FROM Favourites WHERE user_id=? AND powerlifter_id=?;';
+    conn.query(check_query_str, [req.body.userId, req.body.targetId], (check_err, check_result, check_fields) => {
+      if (check_err) {
+        return res.status(500).json({msg: 'Database query error.'});
+      }
+      if (check_result && check_result[0] && check_result[0].user_id !== undefined) {
+        // Remove favorite
+        const delete_query_str = 'DELETE FROM Favourites WHERE user_id=? AND powerlifter_id=?;';
+        conn.query(delete_query_str, [req.body.userId, req.body.targetId], (delete_err, delete_result, delete_fields) => {
+          if (delete_err) {
+            return res.status(500).json({msg: 'Error unfavouriting user.'});
+          }
+          else return res.status(200).json({msg: 'Successfully unfavourited user.'});
+        });
+      } else {
+        // Add favorite
+        const insert_query_str = 'INSERT INTO Favourites (user_id, powerlifter_id) VALUES (?,?);';
+        conn.query(insert_query_str, [req.body.userId, req.body.targetId], (insert_err, insert_result, insert_fields) => {
+          if (insert_err) {
+            return res.status(500).json({msg: 'Error favouriting user.'});
+          }
+          else return res.status(200).json({msg: 'Successfully favourited user.'});
+        });
+      }
+    });
+  });
+});
+
 router.post('/user/info', async function (req, res, next) {
   dbpool.getConnection((connect_err, conn) => {
     if (connect_err)
       return res.status(500).json({ msg: 'Error connecting to the database.' });
 
     const query_str =
-      'SELECT username, pfp_url, bio FROM User WHERE username=?;';
+      'SELECT username, pfp_url, bio, id FROM User WHERE username=?;';
     conn.query(query_str, [req.body.username], (query_err, result, fields) => {
-      if (query_err)
+      if (query_err) {
         return res.status(500).json({ msg: 'Error querying Users.' });
-      if (result.length === 0)
+      }
+      if (result.length === 0) {
         return res.status(404).json({ msg: 'Username not found.' });
-      return res.status(200).json({
-        username: result[0].username,
-        pfp_url: result[0].pfp_url,
-        bio: result[0].bio,
+      }
+
+      const id_query_str = 'SELECT id FROM User WHERE username=?;';
+      conn.query(id_query_str, [req.user.username], (id_err, id_result, id_fields) => {
+        const fav_status_str = 'SELECT user_id FROM Favourites WHERE user_id=? AND powerlifter_id=?';
+        conn.query(fav_status_str, [id_result[0].id, result[0].id], (fav_err, fav_result, fav_fields) => {
+          const is_faved = fav_result?.[0]?.user_id ? true : false;
+          return res.status(200).json({
+            username: result[0].username,
+            pfp_url: result[0].pfp_url,
+            bio: result[0].bio,
+            faved: is_faved,
+            userId: id_result[0].id,
+            targetId: result[0].id
+          });
+        });
       });
     });
   });
@@ -169,7 +213,6 @@ router.post('/home/getfeed', verifyAuth, async function (req, res, next) {
     const query_str =
       'SELECT User.username, User.pfp_url, Lifts.best3benchkg, Lifts.best3squatkg, Lifts.best3deadliftkg, Lifts.totalkg, M.name, M.date FROM Favourites AS fav JOIN Lifts ON fav.powerlifter_id = Lifts.powerlifter_id JOIN Meet AS M ON Lifts.meet_id = M.meet_id JOIN User ON fav.powerlifter_id = User.id WHERE fav.user_id IN (SELECT id FROM User WHERE username = ?) ORDER BY M.date DESC;';
     conn.query(query_str, [req.user.username], (query_err, result, fields) => {
-      console.log(query_err);
       if (query_err) return res.status(500).json({ msg: 'Error querying DB.' });
       if (result.length === 0)
         return res
@@ -208,7 +251,6 @@ router.post('/h2h/compare', async function (req, res, next) {
           query_str,
           [id_result[0].id, id_result[0].id, id_result[1].id, id_result[1].id],
           (query_err, result, fields) => {
-            console.log(query_err);
             if (query_err)
               return res.status(500).json({ msg: 'Error querying DB.' });
             if (result.length === 0)
@@ -301,7 +343,6 @@ router.post('/admin/lifts/new', async function (req, res, next) {
                 const query_str ='INSERT INTO Lifts (powerlifter_id, meet_id, bench1kg, bench2kg, bench3kg, best3benchkg, squat1kg, squat2kg, squat3kg, best3squatkg,deadlift1kg, deadlift2kg, deadlift3kg, best3deadliftkg, totalkg) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
                 conn.query(query_str, [req.body.powerlifter_id, req.body.meet_id, req.body.bench1kg, req.body.bench2kg, req.body.bench3kg, req.body.best3benchkg, req.body.squat1kg, req.body.squat2kg, req.body.squat3kg, req.body.best3squatkg, req.body.deadlift1kg, req.body.deadlift2kg, req.body.deadlift3kg, req.body.best3deadliftkg, req.body.totalkg],
                   (query_err, result, fields) => {
-                    console.log(query_err)
                     if (query_err) return res.status(500).json({ msg: 'Error Inserting into Lifts table.' });
 
                     const query_str ='INSERT INTO Person_Meet_Info (powerlifter_id, meet_id, division, weight_class, place) VALUES(?, ?, ?, ?, ?);';
@@ -344,7 +385,7 @@ router.post('/insertLift', async function (req, res, next) {
     if (connect_err) return res.status(500).json({ msg: 'Error connecting to the database.' });
 
     const id_query_str = 'Select * from Powerlifter as PL join (Select U.id from User as U Join Person as P on P.id = U.id where U.username = ?) as T on PL.id = T.id;';
-    conn.query(id_query_str, [req.body.username],
+    conn.query(id_query_str, [req.user.username],
       (id_query_err, id_result, id_fields) => {
         if (id_query_err) return res.status(500).json({ msg: 'Error querying the Powerlifter table.' });
         if (id_result.length == 0) return res.status(404).json({ msg: 'User is not a powerlifter' });
@@ -364,13 +405,11 @@ router.post('/insertLift', async function (req, res, next) {
                 const query_str = 'INSERT INTO Lifts (powerlifter_id, meet_id, bench1kg, bench2kg, bench3kg, best3benchkg, squat1kg, squat2kg, squat3kg, best3squatkg,deadlift1kg, deadlift2kg, deadlift3kg, best3deadliftkg, totalkg) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
                 conn.query(query_str, [pl_id, req.body.meet_id, req.body.bench1kg, req.body.bench2kg, req.body.bench3kg, req.body.best3benchkg, req.body.squat1kg, req.body.squat2kg, req.body.squat3kg, req.body.best3squatkg, req.body.deadlift1kg, req.body.deadlift2kg, req.body.deadlift3kg, req.body.best3deadliftkg, req.body.totalkg],
                   (query_err, result, fields) => {
-                    console.log(query_err);
                     if (query_err) return res.status(500).json({ msg: 'Error Inserting into Lifts table.' });
 
                     const query_str = 'INSERT INTO Person_Meet_Info (powerlifter_id, meet_id, division, weight_class, place) VALUES(?, ?, ?, ?, ?);';
                     conn.query(query_str, [pl_id, req.body.meet_id, req.body.divison, req.body.division, req.body.weight_class, req.body.place],
                       (query_err, result, fields) => {
-                        console.log(query_err);
                         if (query_err) return res.status(500).json({ msg: 'Error Inserting into Person_Meet_Info table.' });
                         return res.status(200).json({ success: true });
                       }

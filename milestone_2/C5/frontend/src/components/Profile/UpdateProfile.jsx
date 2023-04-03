@@ -43,7 +43,7 @@ function UpdateProfile(props) {
   return (
     <div className="leaderboard cont">
       <h1 className="leaderboard title profile">Edit Profile</h1>
-      <div className="leaderboard indiv">
+      <div className="leaderboard indiv profile">
         <form onSubmit={handleSubmit}>
           <h2 className="leaderboard in label profile">Profile Picture URL</h2>
           <input

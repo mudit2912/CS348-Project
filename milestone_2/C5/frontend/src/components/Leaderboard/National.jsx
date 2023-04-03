@@ -7,15 +7,16 @@ import { getNationalLeaderboard } from "../../apicalls/WrappedCalls.js";
 
 // Functional Component
 function LeaderboardRows(props) {
-    var rows = [];
+    var rows = []; var i = 0;
     for (const key in props.data) {
         const row = props.data[key];
         rows.push(
             <div className="leaderboard row">
-                <h1 className="leaderboard name">{row.first_name} {row.last_name}</h1>
+                <h1 className="leaderboard name">{i}) {row.first_name} {row.last_name}</h1>
                 <h2 className="leaderboard score">{row.totalkg} kg (Total)</h2>
             </div>
         );
+        i++;
     }
     return rows;
 }

@@ -24,8 +24,9 @@ function HomeFeed(props) {
 
     for (const [k, v] in Object.entries(data)) {
       const value = data[k];
+      if (value.best3benchkg === null || value.best3squatkg === null || value.best3deadliftkg === null) continue;
       r.push(
-        <div className="home feed post">
+        <div className="home feed post" key={k}>
           <div className="top">
             <img src={value.pfp_url} />
             <a className="post-username" href={'/u/'+value.username} target="_blank">@{value.username}</a>
@@ -90,10 +91,6 @@ function Home(props) {
   return(
     <>
     <div className="home cont">
-      <h1>Home</h1>
-      <a href="http://localhost:3000/insertlift">
-      <button className='auth cont home-button' type="button"> Add Your Lift</button>
-    </a>
       { (feedLoaded) && <HomeFeed {...{data: feedData}} /> }
       { (noFavorites) &&
         <div className="nofavorites">

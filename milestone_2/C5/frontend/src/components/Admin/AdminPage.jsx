@@ -20,14 +20,16 @@ function AdminPage() {
     }
     return (
         <div className="home cont">
-        <h1 className="auth title" >Admin Page</h1>
-        
+        <h1 className="auth title" >Welcome, Administrators!</h1>
+        <br />
         <form className="auth form" onSubmit={handleNewLiftSubmit}>
-        <h1 className="auth title">Create Lift</h1>
+        <h2 className='leaderboard in label'>Add individual lifts to existing meets:</h2>
         <button className="auth" type="submit">Create Lift</button>
         </form>
+        <br />
+        <br />
         <form className="auth form" onSubmit={handleNewMeetSubmit}>
-        <h1 className="auth title">Create Meet</h1>
+        <h2 className='leaderboard in label'>Create a meet that lifts can be added to:</h2>
         <button className="auth" type="submit">Create Meet</button>
         </form>
 
