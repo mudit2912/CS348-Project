@@ -124,7 +124,8 @@ button.auth.switch > span.green {
 div.home.cont {
   width: 100vw;
   text-align: center;
-  margin-top: calc(10vh);
+  margin-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 div.home.feed {
@@ -137,6 +138,7 @@ div.home.feed.post {
   border: 1px solid var(--green);
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 h2.post-place-date {
@@ -257,6 +259,12 @@ button.profile.favorite {
   font-weight: 600;
 }
 
+button.profile.favorite.outline {
+  border: 2px solid var(--green);
+  background-color: transparent;
+  color: var(--green);
+}
+
 div.leaderboard.cont {
   width: 100vw;
   text-align: center;
@@ -278,7 +286,7 @@ div.leaderboard.indiv {
 
 div.leaderboard.table {
   display: block;
-  width: 400px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px;
@@ -302,6 +310,7 @@ div.leaderboard.row {
 h1.leaderboard.name {
   font-size: 15px;
   margin: 0;
+  font-weight: 500;
 }
 
 h2.leaderboard.score {
@@ -528,4 +537,42 @@ img.navbar.profile.icon {
   border-radius: 5px;
   border: 2px solid var(--green);
   margin-top: -5px;
+}
+
+div.leaderboard.indiv.profile {
+  width: 500px;
+}
+
+div.add-lift.split3 {
+  display: flex;
+}
+
+div.add-lift.split3 > input.auth.input {
+  width: 30%;
+  margin-right: 10px;
+}
+
+div.add-lift.split3 > input.auth.input:last-child {
+  margin-right: 0px;
+}
+
+div.add-lift.cont {
+  margin-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+div.add-lift.cont > form.auth.form {
+  width: 500px;
+}
+
+div.add-lift.cont > form.auth.form > button.auth {
+  margin-top: 50px;
+}
+
+h2.leaderboard.in.label.tac {
+  text-align: center;
+}
+
+h1.tac {
+  text-align: center !important;
 }

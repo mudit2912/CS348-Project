@@ -90,9 +90,13 @@ function NavBar(props) {
                   H2H
                   <div className="navbar rect" />
               </NavLink>
+              <NavLink to="/insertlift" className={(navData) => (navData.isActive ? "active" : "")}>
+                  Add Lift
+                  <div className="navbar rect" />
+              </NavLink>
             </div>
             <div className="navbar right">
-              <NavLink to={`/u/${props.username}/edit`} className={(navData) => (navData.isActive ? "active" : "")}>
+              <NavLink to={`/u/${props.username}`} className={(navData) => (navData.isActive ? "active" : "")}>
                 <img src="https://i.pinimg.com/564x/bc/75/88/bc75882d906b263fbe0550fe59dc7b21.jpg" className="navbar profile icon" />
               </NavLink>
             </div>
@@ -119,7 +123,7 @@ function App() {
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/h2h" element={<HeadToHead />} />
-          <Route path="/u/:user" element={<ViewProfile />} />
+          <Route path="/u/:user" element={<ViewProfile {...{username: username}} />} />
           <Route path="/u/:user/edit" element={<UpdateProfile {...{setUsername: setUsername}} />} />
           <Route path="/leaderboard/global" element={<GlobalLeaderboard />} />
           <Route path="/leaderboard/national" element={<NationalLeaderboard />} />
