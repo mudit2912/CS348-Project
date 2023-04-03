@@ -104,6 +104,36 @@ export async function getProfileInfo(username) {
   return({status: resp.status, data: resultjson});
 }
 
+/*export async function updateProfileInfo(data) {
+  try {
+      const response = await axios.put("/api/updateProfile", data);
+      return response;
+  } catch (error) {
+      console.error(error);
+      return { status: error.response.status };
+  }
+} */
+
+export async function updateProfileInfo(data) {
+  try {
+      const resp = await fetch("http://localhost:5050/api/updateProfile", {
+          method: "PUT",
+          credentials: "include",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+      });
+      const resultjson = await resp.json();
+      return { status: resp.status, data: resultjson };
+  } catch (error) {
+      console.error(error);
+      return { status: error.response.status };
+  }
+}
+
+
+
 // --------------------
 //    HEAD TO HEAD
 // --------------------
