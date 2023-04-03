@@ -15,14 +15,13 @@ const Search = () => {
     }
 
     const response = await getUsers(username);
-
     setUsers(response.data.lifts);
   };
 
   return (
     <div className='leaderboard cont'>
       <h1 className='leaderboard title'>Search Username</h1>
-      <div className='leaderboard indiv'>
+      <div className='leaderboard indiv search'>
         <h2 className='leaderboard in label'>Enter username below:</h2>
         <input
           className='leaderboard input'
@@ -43,6 +42,7 @@ const Search = () => {
                 return (
                   <div
                     key={id}
+                    className="search result cont"
                     style={{
                       display: 'flex',
                       alignItems: 'center',
@@ -53,16 +53,18 @@ const Search = () => {
                     <img
                       src={pfp_url}
                       alt={username}
-                      width='100'
-                      height='100'
+                      className="search result pfp"
                     />
-                    <Link to={`/u/${username}`}>
-                      <span style={{ marginLeft: 10 }}>{username}</span>
+                    <Link className="search result username" to={`/u/${username}`}>
+                      <span>{username}</span>
+                      <div className="search result go">
+                        <h2>></h2>
+                      </div>
                     </Link>
                   </div>
                 );
               })
-            : 'Search for a User!'}
+            : ''}
         </div>
       </div>
     </div>
