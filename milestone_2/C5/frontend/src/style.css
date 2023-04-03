@@ -387,6 +387,14 @@ button.h2h-goback {
   color: white;
 }
 
+button.home-button {
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 2.5%;
+}
+
 h3.h2h.bio {
   width: 80%;
   margin-bottom: 30px;

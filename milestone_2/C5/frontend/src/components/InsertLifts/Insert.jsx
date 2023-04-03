@@ -1,10 +1,10 @@
+// Dependencies
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
-
-// API Imports
-import { createLift } from "../../apicalls/WrappedCalls.js";
-
-function AdminLiftsNew() {
+import { addLift } from "../../apicalls/WrappedCalls.js";
+// Functional Componenet
+function InsertLift() {
+    const [username, setUsername] = useState("");
     const [powerlifter_id, setPowerlifterID] = useState("");
     const [meet_id, setMeetID] = useState("");
     const [division, setDivison] = useState("");
@@ -28,19 +28,22 @@ function AdminLiftsNew() {
     const [ipfpPoints, setIpfpPoints] = useState("");
     const [wilks, setWilks] = useState("");
 
-   async function handleCreateLift(event) {
+    // Handler for 'Continue' / 'Create Account' button pressed
+
+    async function handleCreateLift(event) {
         event.preventDefault();
-        const response = await createLift(powerlifter_id, meet_id, division, place, weight, bench1, bench2, bench3, best3benchkg,
+        console.log('reached')
+        const response = await addLift(username, meet_id, division, place, weight, bench1, bench2, bench3, best3benchkg,
             squat1, squat2, squat3, best3benchkg, deadlift1, deadlift2, deadlift3, best3deadliftkg, totalKg, mccullough, wilks, glossbrenner, ipfpPoints);
         if (response.status !== 200) alert(response.data.msg);
         else alert("Lift added successfully!");
     }
 
     return (
-        <div className="home cont">
+        <div>
             <form className="auth form" onSubmit={handleCreateLift}>
-                <h1 className="auth title">Insert Lift</h1>
-                <input className="auth input" type="text" placeholder="Powerlifter ID" value={ powerlifter_id|| ""} onChange={(event) => setPowerlifterID(event.target.value)} />
+                <h1 className="auth title"><center>Insert Lift</center></h1>
+                <input className="auth input" type="text" placeholder="Username" value={username || ""} onChange={(event) => setUsername(event.target.value)} />
                 <input className="auth input" type="text" placeholder="Meet ID" value={ meet_id || ""} onChange={(event) => setMeetID(event.target.value)} />
                 <input className="auth input" type="text" placeholder="Division" value={division || ""} onChange={(event) => setDivison(event.target.value)} />
                 <input className="auth input" type="text" placeholder="Weight Class" value={weight || ""} onChange={(event) => setWeight(event.target.value)} />
@@ -69,4 +72,4 @@ function AdminLiftsNew() {
     )
 }
 
-export default AdminLiftsNew;
+export default InsertLift;
