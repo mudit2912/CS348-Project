@@ -1,4 +1,4 @@
-# CS348 Project (Milestone 2)
+# CS348 Project (Milestone 3)
 
 ## Pre-Requisites
 Must have docker installed.
@@ -56,7 +56,7 @@ This docker-compose.yml file defines the services for our full-stack web applica
 
 ## Starting the Application
 1. Open terminal
-2. cd into milestone_2/C5
+2. cd into milestone_3/C5
 3. Build the project with the following command:
 ```
 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
@@ -77,7 +77,7 @@ docker compose prune
 ***Warning:*** This will delete all non-running containers from your machine.
 
 ## Demo
-Below is a list of features currently supported for Milestone 2, and how to see them in action.
+Below is a list of features currently supported for Milestone 3, and how to see them in action.
 
 Feel free to open http://localhost:8080 (MySQL Admin service) to take a look at the live database. You can login with:
 ```
@@ -99,6 +99,15 @@ List of frontend files for implemented features:
 - National Leaderboard (~/C5/frontend/src/components/Leaderboard/National.jsx)
 - Head to Head Comparison (~/C5/frontend/src/components/H2H/Controller.jsx)
 - Home Feed (~/C5/frontend/src/components/Home/Controller.jsx)
+- Favourite User (~/C5/frontend/src/components/Profile/ViewProfile.jsx)
+- Admin Control (All 3 .jsx files in ~/C5/frontend/src/components/Admin)
+- Personal Meet Submission (~/C5/frontend/src/components/InsertLifts/Insert.jsx)
+- Search Users (~/C5/frontend/src/components/Search/Controller.jsx)
+- Edit Profile (~/C5/frontend/src/components/Profile/UpdateProfile.jsx)
+
+## New in Milestone 3:
+- Favourite User feature implemented
+- Fancy Features (Finalized UI, Admin Control, Personal Meet Submission, User Search, Update Profile)
 
 #### Authentication
 Open http://localhost:3000/login.
@@ -111,10 +120,6 @@ Password: zack123
 
 Attempting to login with an incorrect username or password will give the appropriate error messages.
 A correct login will display a success message.
-
-## New in Milestone 2:
-- Session management (backend server stores & maintains authentication state)
-- Protected routes (can only access /login & /signup if not logged in)
 
 #### Create Account
 Open http://localhost:3000/signup, or click the 'Sign Up' button on the login page.
@@ -149,7 +154,7 @@ Open http://localhost:3000/leaderboard/national to see a leaderboard of the top 
 
 You can choose the maximum number of results, as well type in as the desired country (try 'USA' or 'Australia'), and hit 'Load' to query the database.
 
-#### Head to Head Comparison (NEW)
+#### Head to Head Comparison
 Open http://localhost:3000/h2h to check out the head to head comparison.
 
 Type in any two usernames to display a side-by-side comparison of the two lifter's stats at every single meet.
@@ -158,7 +163,22 @@ For example, try mgupta and zack_gym as the two usernames.
 
 If you enter a username that does not exist, then an appropriate error message will be displayed. Also, if you enter a username that has no lifts, an error message will be displayed.
 
-#### Home Feed (NEW)
+#### Home Feed
 Open http://localhost:3000/home to check out the home feed.
 
 In the feed, the recent performances of all of a user's favorite powerlifters will be displayed in chronological order.
+
+#### Favourite User (NEW)
+Open http://localhost:3000/u/kabeelanlifts and click "Favourite". You will see that the button changes to say "Unfavourite", and if you reload the page, the button will still stay "Unfavourite". If you go to the home feed, you will see all of @kabeelanlifts's lifts are visible in the feed. Similarly, this will work for any user that is not the current logged in user.
+
+#### Admin Control (NEW)
+Head to http://localhost:3000/admin. You can either add a lift for a specific user (for example, try using Powerlifter ID = 3) or create a new meet (enter a meet ID = 5005).
+
+#### Personal Meet Submission (NEW)
+Head to http://localhost:3000/insertlift. Then, you can fill in all the appropriate information (for example, try using meet ID = 5) and this new performance will be added.
+
+#### User Search (NEW)
+Head to http://localhost:3000/search. Type in whatever your heart desires and usernames will be matched with the string you have typed. Any change will result in a new query, so this is highly responsive. Click on any users displayed in the results, and you will be redirected to their profile page.
+
+#### Edit Profile (NEW)
+Click on the profile icon in the top right of the navigation bar. Click "Edit Profile" to bring up the Edit Profile page, where you can choose a new profile picture, username, and/or biography. Make some changes, hit the 'Update' button, and you will be redirected to your new profile page. Additionally, the profile icon in the top right of the navigation bar will redirect to your new username (if you have chosen a new username).
