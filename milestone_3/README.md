@@ -19,20 +19,7 @@ This will create a SQL_SCRIPTS folder. Inside this folder are all the sql statem
 If you were to execute these queries manually, you would first run Person.sql and Meet.sql in the MySQL database. Then, run Powerlifter.sql. After that, you can run the rest of the files in whatever order you see fit.
 
 #### Loading Production Data into the DB
-As mentioned in the previous subsection, we consolidated the files created by our scripts into the db-setup.sql file, which is loaded into the MySQL server by Docker (db-setup file is located in ./C5/backend/db-setup.sql).
-
-However, the lifts are too large to be run by the db-setup.sql file.
-<code><b>!!! These must be loaded manually !!!</b></code>
-To do so, start the application (following the instructions in the 'Starting the Application' section below).
-
-Open http://localhost:8080 (MySQL Admin service), with the following credentials:
-```
-Server: mysqldb
-Username: root
-Password: !admin!cs348
-Database: powerlifting_db
-```
-Click the 'Import' button on the left-hand menu. Then, import the 'lifts-setup.sql' file found in /C5/backend/lifts-setup.sql, and hit 'Execute'. Once that has completed, the production data has been fully loaded.
+As mentioned in the previous subsection, we consolidated the files created by our scripts into the db-setup.sql file, which is loaded into the MySQL server by Docker (db-setup file is located in ./C5/backend/db-setup.sql). You do not have to manually insert any data or run any scripts to have the production DB loaded into the server on boot.
 
 ## Overview
 The C5 folder contains the following:
