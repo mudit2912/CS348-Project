@@ -21,6 +21,14 @@ If you were to execute these queries manually, you would first run Person.sql an
 #### Loading Production Data into the DB
 As mentioned in the previous subsection, we consolidated the files created by our scripts into the db-setup.sql file, which is loaded into the MySQL server by Docker (db-setup file is located in ./C5/backend/db-setup.sql). You do not have to manually insert any data or run any scripts to have the production DB loaded into the server on boot.
 
+We updated our Python script to be able to directly insert into our MySQL server. Simply run the command
+```
+python3 main.py
+```
+And the data can be loaded into the database directly using Python.
+
+Again, this is not needed as we have consolidated the production database into a DB setup file.
+
 ## Overview
 The C5 folder contains the following:
 
