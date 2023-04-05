@@ -12,7 +12,7 @@ function LeaderboardRows(props) {
         const row = props.data[key];
         rows.push(
             <div className="leaderboard row">
-                <h1 className="leaderboard name">{i}) {row.first_name} {row.last_name}</h1>
+                <h1 className="leaderboard name">{i+1}) {row.first_name} {row.last_name}</h1>
                 <h2 className="leaderboard score">{row.totalkg} kg (Total)</h2>
             </div>
         );
